@@ -13,7 +13,7 @@ const WonderDetail = ({wonder}) => {
             <p>{wonder.facts[1]}</p>
             <Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
             <p>{wonder.facts[2]}</p>
-            <Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+            <Speech text={wonder.facts[2]} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
 
             <p>Fun Facts: {wonder.funFact}</p>
             
