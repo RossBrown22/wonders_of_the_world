@@ -17,5 +17,5 @@ MongoClient.connect('mongodb://localhost:27017', {useUnifiedTopology: true})
 .catch(console.error)
 
 app.listen(5000, function () {
-    console.log(`Listening on port ${ this.adress().port}`)
+    console.log(`Listening on port ${ this.address().port}`)
 });
