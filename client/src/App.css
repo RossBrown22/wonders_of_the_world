@@ -6,8 +6,8 @@
   grid-area: nav-bar;
 }
 
-#content {
-  grid-area: footer;
+#content-1 {
+  grid-area: content-1;
 }
 
 #footer {
@@ -17,9 +17,9 @@
 #grid {
   display: grid;
   grid-template-areas: 
-  'header header'
-  'nav-bar content-1'
+  'header nav-bar'
+  'content-1 content-1'
   'footer footer';
   grid-template-columns: 3fr 7fr;
-  grid-template-rows: 1.5fr 8fr 0.5fr;
+  grid-template-rows: 1.5fr 8fr ;
 }

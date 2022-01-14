@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import WondersGrid from '../components/WondersGrid';
 import WondersService from '../services/WondersService';
 import WonderDetail from '../components/WonderDetail';
+import './WondersContainer.css'
 
 
 const WondersContainer = () => {
@@ -20,12 +21,13 @@ const WondersContainer = () => {
     }
 
     return(
-        <>
+        <div className="main-container">
             
-            <WondersGrid wonders={wonders} onWonderSelected={onWonderSelected}/>
-            {selectedWonder ?<WonderDetail wonder={selectedWonder} /> : null}
-                    
-        </>
+                <WondersGrid wonders={wonders} onWonderSelected={onWonderSelected}/>
+            
+                {selectedWonder ?<WonderDetail wonder={selectedWonder} /> : null}
+            
+        </div>
     )
 }
 

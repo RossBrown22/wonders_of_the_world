@@ -1,4 +1,10 @@
 .wonder-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
+    width: 200px;
   }
+
+.wonder-detail {
+  display: flex;
+    flex-flow: column;
+}
