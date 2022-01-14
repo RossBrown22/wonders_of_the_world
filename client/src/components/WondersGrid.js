@@ -1,7 +1,7 @@
 import WonderCard from "./WonderCard";
-import WonderDetail from '../components/WonderDetail';
+import './WonderGrid.css'
 
-const WondersGrid = ({wonders, selectedWonder, onWonderSelected}) => {
+const WondersGrid = ({wonders, onWonderSelected}) => {
     
     return (
         <div className="wonder-wrapper"> 
@@ -9,8 +9,7 @@ const WondersGrid = ({wonders, selectedWonder, onWonderSelected}) => {
                 return (
                     <>
                     <WonderCard key={wonder._id} wonder={wonder} onWonderSelected={onWonderSelected}/> 
-                    {selectedWonder ?<WonderDetail wonder={selectedWonder} /> : null}
-                    </>   
+                    </> 
                 )
             })}
         
