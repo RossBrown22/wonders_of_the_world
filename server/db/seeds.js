@@ -53,5 +53,5 @@ db.wonders.insertMany([
         facts: ["It was completed in 1658 by Emperor Shah Jahn who built it for his wife.", "Became one of the 7 wonders in 2007 (after being voted by the public)", "In order to protect the Taj Mahal from the harmful effects of pollution, all motor vehicles MUST stay 500 meters away."],
         funFact: "In 1600 it cost 314 million pounds to build - which in 2022 is the equivalent to 3 billion, 579 million pounds!!",
         collection: "new"
-    },
+    }
 ])

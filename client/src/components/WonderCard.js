@@ -1,9 +1,15 @@
 import React from 'react'
 
-const WonderCard = ({wonder}) => {
+const WonderCard = ({wonder, onWonderSelected}) => {
+    const handleClick=() => {
+        onWonderSelected(wonder)
+    }
+
+
     return(
         <>
-            <h1>{wonder.name}</h1>
+            <h1 onClick={handleClick} >{wonder.name}</h1>
+
             
         </>
     )
