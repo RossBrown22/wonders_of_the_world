@@ -4,7 +4,7 @@ import WonderDetail from '../components/WonderDetail';
 const WondersGrid = ({wonders, selectedWonder, onWonderSelected}) => {
     
     return (
-        <div> 
+        <div className="wonder-wrapper"> 
             {wonders.map(wonder => {
                 return (
                     <>

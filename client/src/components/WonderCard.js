@@ -1,4 +1,4 @@
-import React from 'react'
+import Speech from 'react-speech'
 
 const WonderCard = ({wonder, onWonderSelected}) => {
     const handleClick=() => {
@@ -7,10 +7,11 @@ const WonderCard = ({wonder, onWonderSelected}) => {
 
 
     return(
-        <>
+        <>            
             <h1 onClick={handleClick} >{wonder.name}</h1>
-
             
+                <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+
         </>
     )
 }
