@@ -8,50 +8,57 @@ db.wonders.insertMany([
         facts: ["It was discovered by Swiss explorer Johann Ludwig Burckhardt in 1812.",
                 "Some archaeologists believed it to be a temple, while others thought it was a place to store documents.", 
                 "The city is nicknamed Rose city because it is carved from pink coloured rock."],
-        funFact: "Inside, the high rock walls reach 262 feet into the air which is the equivalent to 14 giraffe on top of each other).",
-        collection: "new"
+        funFact: "Inside, the high rock walls reach 262 feet into the air, which is the equivalent to 14 giraffe standing on top of each other).",
+        collection: "new",
+        image: "Petra.jpeg"
     },
     {
         name: "Great Wall",
         location: "China",
-        facts: ["The wall was built the 7th century, putting the wall at almost 3,000 years old.",
-                "It took almost 2000 years to build and rebuild the wall.", "It was built for kingdom border defenses, to defend China's northern border, and for tourism."],
+        facts: ["The wall was built in the 7th century, putting the wall at almost 3,000 years old.",
+                "It took almost 2000 years to build and maintain the wall.", "It was built for kingdom defenses, to defend China's northern border, and also for tourism."],
         funFact: "The total length of all sections of the Great Wall of China adds up to about 13,171 miles, which is the equivalent to 439 elephants from tail to trunk.",
-        collection: "new"
+        collection: "new",
+        image: "GreatWall.jpeg"
     },
     {
         name: "Christ the Redeemer",
         location: "Brazil",
-        facts: ["Began construction in 1926 and was completed in 1931.", "It was made with 6 million soapstone tiles.", "It was requested that the statue be built so it would be visible from anywhere and everywhere in Rio de Janeiro."],
+        facts: ["It began construction in 1926 and was completed in 1931.", "It was made with 6 million soapstone tiles.", "It was requested that the statue be built so it would be visible from anywhere and everywhere in Rio de Janeiro."],
         funFact: "It stands at 98 feet tall, which is the same length as a Boeing 737 Aeroplane!",
-        collection: "new"
+        collection: "new",
+        image: "ChristtheRedeemer.jpeg"
     },
     {
         name: "Colosseum",
         location: "Italy",
-        facts: ["Built in the 1st century.", "6 million people visiting it each year.", "It only took nine years to build!"],
-        funFact: "Was originally used for gladiators to see who was the strongest fighter!",
-        collection: "new"
+        facts: ["It was built in the 1st century.", "6 million people visiting it each year.", "It only took nine years to build!"],
+        funFact: "It was originally used for gladiators to see who was the strongest fighter!",
+        collection: "new",
+        image: "Colosseum.jpeg"
     },
     {
         name: "Machu Pichu",
         location: "Peru",
-        facts: ["Discovered by the western world in 1911.", "The Incan City is believed to have been inhabited in the 1600s.", "It was built to serve as a royal retreat, although its purpose is ultimately unknown."],
-        funFact: "Located at an altitude of 2400 meters which is the equivalent to 524 double decker buses!",
-        collection: "new"
+        facts: ["It was discovered by the western world in 1911.", "The Incan City is believed to have been inhabited in the 1600s.", "It was built to serve as a royal retreat, although its purpose is ultimately unknown."],
+        funFact: "It is located at an altitude of 2400 meters, which is the equivalent to 524 double decker buses!",
+        collection: "new",
+        image: "MachuPicchu.jpeg"
     },
     {
         name: "Chichen Itza",
         location: "Mexico",
-        facts: ["Dates back to the 9th century.", "The main pyramid nests multiple smaller pyramids inside it.", "It became an important commercial centre, trading in goods - including gold and other treasures."],
+        facts: ["It dates back to the 9th century.", "The main pyramid nests multiple smaller pyramids inside it.", "Originally it became an important commercial centre, trading in goods - including gold and other treasures."],
         funFact: "The Great Pyramid also has 365 steps, which is 24 times the amount of an average house!",
-        collection: "new"
+        collection: "new",
+        image: "ChichenItza.jpeg"
     },
     {
         name: "Taj Mahal",
         location: "India",
-        facts: ["It was completed in 1658 by Emperor Shah Jahn who built it for his wife.", "Became one of the 7 wonders in 2007 (after being voted by the public).", "In order to protect the Taj Mahal from the harmful effects of pollution, all motor vehicles MUST stay 500 meters away."],
-        funFact: "In 1600 it cost 314 million pounds to build - which in 2022 is the equivalent to 3 billion, 579 million pounds!!",
-        collection: "new"
+        facts: ["It was completed in 1658 by Emperor Shah Jahn who built it for his wife.", "Became one of the 7 wonders in 2007, (after being voted by the public).", "In order to protect the Taj Mahal from the harmful effects of pollution, all motor vehicles MUST stay 500 meters away."],
+        funFact: "In 1600 it cost 314 million pounds to build - which in 2022 is the equivalent to 3 billion, 579 million pounds!",
+        collection: "new",
+        image: "TajMahal.jpeg"
     }
 ])
