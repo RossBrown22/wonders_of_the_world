@@ -7,7 +7,14 @@ const WonderDetail = ({wonder}) => {
             <h2>{wonder.name}</h2>
             <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
             <p>Location: {wonder.location}</p>
-            <p>Facts: {wonder.facts[0]}</p> 
+
+            <p>{wonder.facts[0]}</p>
+            <Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+            <p>{wonder.facts[1]}</p>
+            <Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+            <p>{wonder.facts[2]}</p>
+            <Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+
             <p>Fun Facts: {wonder.funFact}</p>
             
             
