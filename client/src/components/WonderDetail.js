@@ -1,5 +1,7 @@
 import React from 'react'
 import Speech from 'react-speech'
+import './WonderDetail.css'
+
 
 const WonderDetail = ({wonder}) => {
     return(
