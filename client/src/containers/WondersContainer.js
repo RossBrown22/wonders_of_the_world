@@ -10,6 +10,7 @@ const WondersContainer = () => {
     const [wonders, setWonders] = useState([]);
     const [selectedWonder, setSelectedWonder] = useState(null);
     const [filteredWonders, setFilteredWonders] = useState([])
+    
 
     useEffect(() => {
         WondersService.getWonders()
@@ -25,14 +26,15 @@ const WondersContainer = () => {
     }
 
     const filterWonders = () => {
-        const result = wonders.filter(wonder => wonder.collection ==="ancient")
+        const pathname = window.location.pathname
+        const result = wonders.filter(wonder => wonder.collection ===pathname)
         setFilteredWonders(result)
     }
 
     return(
         <div className="main-container">
             
-                <WondersGrid wonders={wonders} onWonderSelected={onWonderSelected}/>
+                <WondersGrid wonders={filteredWonders} onWonderSelected={onWonderSelected}/>
             
                 {selectedWonder ?<WonderDetail wonder={selectedWonder} /> : null}
             
