@@ -60,5 +60,61 @@ db.wonders.insertMany([
         funFact: "In 1600 it cost 314 million pounds to build - which in 2022 is the equivalent to 3 billion, 579 million pounds!",
         collection: "new",
         image: "TajMahal.jpeg"
+    },
+    {
+        name: "Great Pyramid of Giza",
+        location: "Egypt",
+        facts: ["It is more than five thousand years old.", "It's estimated that it took well more than two million stone blocks to make.", "It was built for a pharaoh (King) named Khufu."],
+        funFact: "When it was built it was 481 feet tall, however because of erosion, it is now 455 feet tall!",
+        collection: "ancient",
+        image: ""
+    },
+    {
+        name: "Hanging Gardens of Babylon",
+        location: "Iraq",
+        facts: ["The gardens were thought to be about 75 feet high.", "They were built when King Nebuchadnezzar The Second was in power in Babylon.", "The plants did not actually hang. They grew from many different levels of terraces (similar to balconies)."],
+        funFact: "It would have taken 8,200 gallons of water each day to keep the plants watered. Which is roughly the same as 18,500, 2 litres bottles!",
+        collection: "ancient",
+        image: ""
+    },
+    {
+        name: "Temple of Artemis",
+        location: "Turkey",
+        facts: ["The temple was burnt down by Herostratus, as he believed it would 'make him famous'.", "It was used as a house of worship to Artemis and as well as a marketplace.", "The remains of the structure were first discovered in 1869 by John Turtle Wood."],
+        funFact: "It may have been the first ever building which was constructed of Marble!",
+        collection: "ancient",
+        image: ""
+    },
+    {
+        name: "Statue of Zeus",
+        location: "Greece",
+        facts: ["It was made by the Greek sculptor Phidias around 435 BC.", "The statue was built with ivory plates and gold panels on a wooden framework.", "Zeus was the sky and thunder god in ancient Greek religion."],
+        funFact: "The statue was so tall, that if Zeus was to 'stand up', the roof would fall off the temple!",
+        collection: "ancient",
+        image: ""
+    },
+    {
+        name: "Mausoleum At Halicarnassus",
+        location: "Turkey",
+        facts: ["Construction was finished around 350 BC.", "At the very top, there was a large statue of Mausolus and Artemisia in a chariot pulled by four horses.", "It was mainly built using white marble."],
+        funFact: "Almost 19 centuries after it was completed, the Mausoleum was destroyed by earthquakes in the 1300s!",
+        collection: "ancient",
+        image: ""
+    },
+    {
+        name: "Colossus of Rhodes",
+        location: "Island of Rhodes",
+        facts: ["It was a symbol of strength and freedom for the people of Rhodes.", "There are rumours that a new Colossus may be built at Rhodes Harbour at some point in the future.", "Historians believe that 900 camels were used to carry away all the scrap metal."],
+        funFact: "It was 108 feet tall, which is nearly the same height as the Statue of Liberty!",
+        collection: "ancient",
+        image: ""
+    },
+    {
+        name: "Lighthouse of Alexandria",
+        location: "Egypt",
+        facts: ["The top of the tower had a mirror that reflected sunlight during the day.", "It was among the tallest man-made structures on Earth for many centuries.", "It was sadly destroyed by earthquakes."],
+        funFact: "It has also been known to be called Pharos, meaning 'lighthouse' in some languages!",
+        collection: "ancient",
+        image: ""
     }
 ])
