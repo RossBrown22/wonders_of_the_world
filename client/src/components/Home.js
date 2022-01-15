@@ -5,17 +5,17 @@ const Home = () => {
             <button type="button" onClick={(e) => {
             e.preventDefault();
             window.location.href="http://localhost:3000/new";
-            }}>New</button>
+            }}>🕌<br />New</button>
 
             <button type="button" onClick={(e) => {
             e.preventDefault();
             window.location.href="http://localhost:3000/ancient";
-            }}>Ancient</button>
+            }}>🏛<br />Ancient</button>
 
             <button type="button" onClick={(e) => {
             e.preventDefault();
             window.location.href="http://localhost:3000/natural";
-            }}>Natural</button>
+            }}>🏔<br />Natural</button>
         </>
     )
 }
