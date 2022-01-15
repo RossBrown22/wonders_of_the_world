@@ -116,5 +116,61 @@ db.wonders.insertMany([
         funFact: "It has also been known to be called Pharos, meaning 'lighthouse' in some languages!",
         collection: "ancient",
         image: "Lighthouse.jpeg"
+    },
+    {
+        name: "Aurora Borealis",
+        location: "Arctic Circle",
+        facts: ["Also known as the Northern Lights.", "Aurora is the Roman god of the dawn; Boreas is the Greek name for the north wind.", "The Menominee Indians thought the lights were the torches of giants living in the North."],
+        funFact: "The Vikings thought the Northern Lights were caused by the shining weaponry of immortal warriors!",
+        collection: "natural",
+        image: "Aurora.jpeg"
+    },
+    {
+        name: "Grand Canyon",
+        location: "United States of America",
+        facts: ["It is estimated that it began to form more than 17 million years ago.", "In some areas, the canyon is more than 1 mile deep.", "It developed when the Colorado River naturally formed its pathway through the landscape of Arizona."],
+        funFact: "At the widest point, the Canyon measures up to 18 miles, which would take about 6 hours to walk across!",
+        collection: "natural",
+        image: "Canyon.jpeg"
+    },
+    {
+        name: "Great Barrier Reef",
+        location: "Australia ",
+        facts: ["It is the largest coral reef system in the world.", "It is made up of around 2900 individual reefs and 900 islands.", "Climate change is perhaps the biggest threat to the Great Barrier Reef."],
+        funFact: "Over 1500 different species of fish live in the Great Barrier Reef, including clownfish, star of the animated film Finding Nemo!",
+        collection: "natural",
+        image: "Reef.jpeg"
+    },
+    {
+        name: "Harbor of Rio de Janeiro",
+        location: "Brazil",
+        facts: ["It was discovered by the Portuguese seafarer, Concalo Coelho on January 1st, 1502.", "Rio de Janeiro is Portuguese for River of January.", "The Bay spans 88 miles in length and has 50 miles of beaches."],
+        funFact: "The water covers a surface area of 238 square miles, which is almost enough to cover Central Park in New York 80 times over!",
+        collection: "natural",
+        image: "RioHarbor.jpeg"
+    },
+    {
+        name: "Mount Everest",
+        location: "Asia",
+        facts: ["It is over 60 million years old.", "Everest was named 'Sagarmatha' by the Nepal Government. It means goddess of the sky.", "The summit was measured in 2020 at 29,031.69 feet."],
+        funFact: "It was first named Peak 15 in 1856, but later changed to 'Mount Everest' in 1865 after Sir George Everest!",
+        collection: "natural",
+        image: "Everest.jpeg"
+    },
+    {
+        name: "Paricutin Volcano",
+        location: "Mexico",
+        facts: ["It first erupted in 1943.", "The volcano was named after the village where it is located.", "The flowing lava was fast flowing and could move at a speed of 60 meters per minute."],
+        funFact: "The exploding gases from the volcano reached 1060 degree celsius!",
+        collection: "natural",
+        image: "Paricutin.jpeg"
+    },
+    {
+        name: "Victoria Falls",
+        location: "Africa",
+        facts: ["It is most well-known for being one of the widest waterfalls in the world.", "It is estimated that it started to form around 20,000 years ago.", "The widest point of the waterfall is 5,604 feet and 355 feet high."],
+        funFact: "It is estimated humans first started to settle near Victoria Falls during the Early Stone Age!",
+        collection: "natural",
+        image: "VictoriaFalls.jpeg"
     }
 ])

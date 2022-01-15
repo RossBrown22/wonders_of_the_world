@@ -7,19 +7,24 @@ const Home = () => {
             <button type="button" onClick={(e) => {
             e.preventDefault();
             window.location.href="http://localhost:3000/new";
-            }}>New</button>
+            }}>🕌<br />New</button>
 
             <button type="button" onClick={(e) => {
             e.preventDefault();
             window.location.href="http://localhost:3000/ancient";
-            }}>Ancient</button>
+            }}>🏛<br />Ancient</button>
 
             <button type="button" onClick={(e) => {
             e.preventDefault();
             window.location.href="http://localhost:3000/natural";
-            }}>Natural</button>
+            }}>🏔<br />Natural</button>
 
-            <img src={"/img/Rotating_globe.gif"}></img>
+            <button type="button" onClick={(e) => {
+            e.preventDefault();
+            window.location.href="http://localhost:3000/quiz";
+            }}>📝<br />Quiz</button>
+
+        <img src={"/img/Rotating_globe.gif"}></img>
         </div>
     )
 }
