@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import Speech from 'react-speech'
-import './WonderDetail.css'
-
+import React, { useState, useEffect } from 'react';
+import Speech from 'react-speech';
+import PuzzlePic from './PuzzlePic';
+import './WonderDetail.css';
+ 
 
 const WonderDetail = ({wonder}) => {
     
     const [factsListenedTo, setFactsListenedTo] = useState([]);
-    const [funFactUnlocked, setFunFactUnlocked] = useState(false)
+    const [funFactUnlocked, setFunFactUnlocked] = useState(false);
+    const [puzzleKey, setPuzzleKey] = useState(0)
     
     useEffect(() => {
         checkAllFactsListened();
@@ -14,11 +16,17 @@ const WonderDetail = ({wonder}) => {
 
     useEffect(() => {
         clearFunFact();
+        changePuzzleKey();
       }, [wonder])
 
     const clearFunFact = () => {
         setFactsListenedTo([]);
         setFunFactUnlocked(false);
+    }
+
+    const changePuzzleKey = () => {
+        const now = Date.now()
+        setPuzzleKey(now)
     }
 
     const handleClickFact1=() => {
@@ -43,12 +51,13 @@ const WonderDetail = ({wonder}) => {
         }
     }
 
-
-     return(
+    return(
         <div className='wonder-detail'>
             <h2>{wonder.name}</h2>
                 <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
             <img src={`/img/${wonder.image}`} alt={wonder.name} />
+            <PuzzlePic wonder={wonder} key={puzzleKey}/>
+            
             
             <p><i onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[0]}</p>
 
@@ -57,9 +66,14 @@ const WonderDetail = ({wonder}) => {
             <p><i onClick={handleClickFact3}><Speech text={wonder.facts[2]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[2]}</p>
                 
             {funFactUnlocked ? <p>Fun Fact: {wonder.funFact}</p> : <p>🔒 Listen to all 3 facts to unlock crazy fact!!</p> }
-            
+ 
         </div>
     )
 }
+
+// render(
+//     <WonderDetail />,
+//     document.getElementById('root')
+//   );
 
 export default WonderDetail

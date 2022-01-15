@@ -9,9 +9,6 @@ const WonderCard = ({wonder, onWonderSelected}) => {
     return(
         <div className="wonder-card">            
             <h1 onClick={handleClick} >{wonder.name}</h1>
-            
-                
-
         </div>
     )
 }
