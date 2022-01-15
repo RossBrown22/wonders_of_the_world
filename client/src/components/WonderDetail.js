@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import Speech from 'react-speech'
-import './WonderDetail.css'
-import { render } from 'react-dom';
-import Puzzle from 'react-image-puzzle';
+import React, { useState, useEffect } from 'react';
+import Speech from 'react-speech';
 import PuzzlePic from './PuzzlePic';
+import './WonderDetail.css';
  
-
 
 const WonderDetail = ({wonder}) => {
     
     const [factsListenedTo, setFactsListenedTo] = useState([]);
     const [funFactUnlocked, setFunFactUnlocked] = useState(false);
+    const [puzzleKey, setPuzzleKey] = useState(0)
     
     useEffect(() => {
         checkAllFactsListened();
@@ -18,11 +16,17 @@ const WonderDetail = ({wonder}) => {
 
     useEffect(() => {
         clearFunFact();
+        changePuzzleKey();
       }, [wonder])
 
     const clearFunFact = () => {
         setFactsListenedTo([]);
         setFunFactUnlocked(false);
+    }
+
+    const changePuzzleKey = () => {
+        const now = Date.now()
+        setPuzzleKey(now)
     }
 
     const handleClickFact1=() => {
@@ -52,7 +56,7 @@ const WonderDetail = ({wonder}) => {
             <h2>{wonder.name}</h2>
                 <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
             <img src={`/img/${wonder.image}`} alt={wonder.name} />
-            <PuzzlePic wonder={wonder} key={Date.now()}/>
+            <PuzzlePic wonder={wonder} key={puzzleKey}/>
             
             
             <p><i onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[0]}</p>
