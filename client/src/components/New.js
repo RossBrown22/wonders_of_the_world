@@ -5,7 +5,7 @@ function New() {
   return (
     <div id="grid">
             <header id="header">
-                <h1>Wonders</h1>
+                <h1>The 7 New Wonders of the World</h1>
                 <button type="button" onClick={(e) => {
                 e.preventDefault();
                 window.location.href="http://localhost:3000/";
