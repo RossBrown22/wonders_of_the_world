@@ -9,15 +9,24 @@ const WondersContainer = () => {
     
     const [wonders, setWonders] = useState([]);
     const [selectedWonder, setSelectedWonder] = useState(null);
-
+    const [filteredWonders, setFilteredWonders] = useState([])
 
     useEffect(() => {
-            WondersService.getWonders()
+        WondersService.getWonders()
         .then(wonders => setWonders(wonders))
     }, [])
 
+    useEffect(() => {
+        filterWonders()
+    }, [wonders])
+
     const onWonderSelected=(wonder) => {
         setSelectedWonder(wonder) 
+    }
+
+    const filterWonders = () => {
+        const result = wonders.filter(wonder => wonder.collection ==="ancient")
+        setFilteredWonders(result)
     }
 
     return(
