@@ -41,13 +41,13 @@ const WonderDetail = ({wonder}) => {
                 <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
             <img src={`/img/${wonder.image}`} alt={wonder.name} />
             
-            <p>{wonder.facts[0]}</p>
-                <div onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></div>
-            <p>{wonder.facts[1]}</p>
-                <div onClick={handleClickFact2}><Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></div>
-            <p>{wonder.facts[2]}</p>
-                <div onClick={handleClickFact3}><Speech text={wonder.facts[2]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></div>
-            {funFactUnlocked ? <p>Fun Fact: {wonder.funFact}</p> : null }
+            <p><i onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[0]}</p>
+
+            <p><i onClick={handleClickFact2}><Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[1]}</p>
+
+            <p><i onClick={handleClickFact3}><Speech text={wonder.facts[2]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[2]}</p>
+                
+            {funFactUnlocked ? <p>Fun Fact: {wonder.funFact}</p> : <p>🔒 Listen to all 3 facts to unlock crazy fact!!</p> }
             
         </div>
     )
