@@ -12,6 +12,15 @@ const WonderDetail = ({wonder}) => {
         checkAllFactsListened();
       }, [factsListenedTo])
 
+    useEffect(() => {
+        clearFunFact();
+      }, [wonder])
+
+    const clearFunFact = () => {
+        setFactsListenedTo([]);
+        setFunFactUnlocked(false);
+    }
+
     const handleClickFact1=() => {
         const updatedFactsListenedTo = [...factsListenedTo, "fact 1"];
         setFactsListenedTo(updatedFactsListenedTo);        
