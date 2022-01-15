@@ -1,23 +1,15 @@
 import './App.css';
-import WondersContainer from './containers/WondersContainer';
+import New from "./components/New";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 function App() {
   return (
-    <div id="grid">
-            <header id="header">
-                <h1>Wonders</h1>
-            </header>
-            <nav id="nav-bar">
-            <h2>Nav</h2>
-            </nav>
-            <section id="content-1">
-              <WondersContainer />
-            </section>
-            <footer id="footer">
-              <h3>Footer</h3>
-            </footer>
-    </div>
+    <Router>
+    <>
+      <Route exact path="/New" component={New} />
+    </>
+    </Router>
   );
 }
 
