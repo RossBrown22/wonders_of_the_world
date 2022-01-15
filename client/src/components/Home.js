@@ -11,6 +11,11 @@ const Home = () => {
             e.preventDefault();
             window.location.href="http://localhost:3000/ancient";
             }}>Ancient</button>
+
+            <button type="button" onClick={(e) => {
+            e.preventDefault();
+            window.location.href="http://localhost:3000/natural";
+            }}>Natural</button>
         </>
     )
 }
