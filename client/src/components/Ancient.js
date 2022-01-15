@@ -1,7 +1,7 @@
 import WondersContainer from "../containers/WondersContainer";
 
 
-function New() {
+function Ancient() {
   return (
     <div id="grid">
             <header id="header">
@@ -20,4 +20,4 @@ function New() {
   );
 }
 
-export default New;
+export default Ancient;
