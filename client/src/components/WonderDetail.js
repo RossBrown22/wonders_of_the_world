@@ -55,12 +55,23 @@ const WonderDetail = ({wonder}) => {
         }
     }
 
+    const sayNameAndLocation = () => {
+        const combinedName = `${wonder.name}. ${wonder.location}`
+        return (
+            combinedName
+        )
+    }
+
     return(
         <div className='wonder-detail'>
             <h2>{wonder.name}</h2>
-                <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
-            {/* <img src={`/img/${wonder.image}`} alt={wonder.name} /> */}
-            <PuzzlePic wonder={wonder} key={puzzleKey}/>
+            <h3>{wonder.location}</h3>
+            <Speech text={sayNameAndLocation()} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+
+            <div className='both-pics'>
+                <PuzzlePic wonder={wonder} key={puzzleKey}/>
+                <img className="complete-img" src={`/img/${wonder.image}`} alt={wonder.name} />
+            </div>
             
             
             <p><i onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[0]}</p>

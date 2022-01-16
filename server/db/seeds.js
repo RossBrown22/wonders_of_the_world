@@ -44,7 +44,7 @@ db.wonders.insertMany([
     {
         name: "Colosseum",
         location: "Italy",
-        facts: ["It was built in the 1st century.", "6 million people visiting it each year.", "It only took nine years to build!"],
+        facts: ["It was built in the 1st century.", "6 million people visit it each year.", "It only took nine years to build!"],
         funFact: "It was originally used for gladiators to see who was the strongest fighter!",
         collection: "/new",
         image: "Colosseum.jpeg"
