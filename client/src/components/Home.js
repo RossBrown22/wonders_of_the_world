@@ -1,3 +1,4 @@
+import UsersContainer from '../containers/UsersContainer';
 import './Home.css'
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
             }}>📝<br />Quiz</button>
 
         <img src={"/img/Rotating_globe.gif"}></img>
+        <UsersContainer />
         </div>
     )
 }

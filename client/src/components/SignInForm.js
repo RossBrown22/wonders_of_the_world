@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SignInForm = ({onSignInFormSubmit}) => {
+const SignInForm = ({onSignInSubmit}) => {
     
     const [name, setName] = useState("");
 
