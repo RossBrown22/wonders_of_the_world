@@ -10,24 +10,143 @@ return(
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[51.505, -0.09]}>
+
+
+
+{/* NEW  */}
+
+    <Marker position={[30.323337, 35.451666]}>
         <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
+        Petra <br /> <Link to="/new"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
 
-    <Marker position={[50.505, -0.59]}>
+    <Marker position={[40.4319077,116.5681862]}>
         <Popup>
-        My test popup. <br /> Easily customizable.
+        Great Wall <br /> <Link to="/new"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
 
     <Marker position={[-22.951916, -43.2126759]}>
         <Popup>
-        Cristo Redentor. <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Christ the Redeemer <br /> <Link to="/new"><button type="button">Learn More</button></Link>
         {/* <button><a href="/new">Learn More</a></button>. */}
+        </Popup>
+    </Marker>
+
+    <Marker position={[41.8902821,12.4878589]}>
+        <Popup>
+        Colosseum <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[-13.1631412,-72.5471516]}>
+        <Popup>
+        Machu Pichu <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[20.6787816,-88.5706656]}>
+        <Popup>
+        Chichen Itza <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[27.1751448,78.0399535]}>
+        <Popup>
+        Taj Mahal <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+
+{/* ANCIENT  */}
+
+<Marker position={[29.9792345,31.1320132]}>
+        <Popup>
+        Great Pyramid of Giza <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[32.4912413,44.435228]}>
+        <Popup>
+        Hanging Gardens of Babylon <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[37.9493601,27.3627619]}>
+        <Popup>
+        Temple of Artemis <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[37.8022947,22.1210547]}>
+        <Popup>
+        Statue of Zeus <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[37.0378874,27.4219277]}>
+        <Popup>
+        Mausoleum At Halicarnassus  <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[36.4509959,28.2236147]}>
+        <Popup>
+        Colossus of Rhodes <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Lighthouse of Alexandria <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+
+{/* NATURAL */}
+
+<Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Aurora Borealis <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Grand Canyon <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Great Barrier Reef <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Harbor of Rio de Janeiro  <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Mount Everest <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Paricutin Volcano <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        </Popup>
+    </Marker>
+
+    <Marker position={[31.2124397,29.887799]}>
+        <Popup>
+        Victoria Falls <br /> <Link to="/new"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
