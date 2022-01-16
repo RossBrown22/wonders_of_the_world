@@ -1,6 +1,6 @@
 
 .home-page {
-    background-color: aquamarine;
+
 
 }
 
@@ -21,7 +21,7 @@
     min-width: 400px;
     border-radius: 20px;
     transition-duration: 0.4s;
-    box-shadow: 3px 3px 3px #888888;
+    
 }
 
 .front-btn a button:hover {

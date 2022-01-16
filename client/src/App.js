@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from './components/NavBar';
 import Home from './components/Home';
 import New from "./components/New";
 import Ancient from './components/Ancient';
@@ -7,9 +6,9 @@ import Natural from './components/Natural';
 import Quiz from './components/Quiz';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
 function App() {
   return (
+    <div className='background-img'>
     <Router>
     <>
       <Route exact path="/" component={Home} />
@@ -19,6 +18,7 @@ function App() {
       <Route exact path="/quiz" component={Quiz} />
     </>
     </Router>
+    </div>
   );
 }
 
