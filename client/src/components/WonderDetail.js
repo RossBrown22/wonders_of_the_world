@@ -49,7 +49,7 @@ const WonderDetail = ({wonder}) => {
     const checkAllFactsListened = async () => {
         const allFacts = ["fact 1", "fact 2", "fact 3"]
         if (allFacts.every(item => factsListenedTo.includes(item))){
-            const delay = ms => new Promise(res => setTimeout(res, ms));
+            const delay = milliseconds => new Promise(res => setTimeout(res, milliseconds));
             await delay(5000);
             setFunFactUnlocked(true);
         }
@@ -59,7 +59,7 @@ const WonderDetail = ({wonder}) => {
         <div className='wonder-detail'>
             <h2>{wonder.name}</h2>
                 <Speech text={wonder.name} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
-            <img src={`/img/${wonder.image}`} alt={wonder.name} />
+            {/* <img src={`/img/${wonder.image}`} alt={wonder.name} /> */}
             <PuzzlePic wonder={wonder} key={puzzleKey}/>
             
             
@@ -69,7 +69,12 @@ const WonderDetail = ({wonder}) => {
 
             <p><i onClick={handleClickFact3}><Speech text={wonder.facts[2]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[2]}</p>
                 
-            {funFactUnlocked ? <p>Fun Fact: {wonder.funFact}</p> : <p>🔒 Listen to all 3 facts to unlock crazy fact!!</p> }
+            {funFactUnlocked ? 
+                <>
+                    <h3>⭐️ Well Done! You Unlocked the Fact!⭐️ </h3>
+                    <p>{wonder.funFact}</p> 
+                </>: 
+                    <h3>🔒 Listen to all 3 facts above to unlock crazy fact! 🔒</h3> }
  
         </div>
     )
