@@ -44,9 +44,13 @@ const WonderDetail = ({wonder}) => {
         setFactsListenedTo(updatedFactsListenedTo);
     }
     
-    const checkAllFactsListened = () => {
+    
+
+    const checkAllFactsListened = async () => {
         const allFacts = ["fact 1", "fact 2", "fact 3"]
         if (allFacts.every(item => factsListenedTo.includes(item))){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(5000);
             setFunFactUnlocked(true);
         }
     }
