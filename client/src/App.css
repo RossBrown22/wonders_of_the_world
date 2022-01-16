@@ -34,3 +34,14 @@
   grid-template-columns: 3fr 7fr 3fr;
   grid-template-rows: 1.5fr 8fr ;
 }
+
+.leaflet-container{
+  width: 70vw;
+  height: 70vh;
+  
+}
+
+/* #mapbox-div {
+  width: 50%;
+  height: 50%
+} */

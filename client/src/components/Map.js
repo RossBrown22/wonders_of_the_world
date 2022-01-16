@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import WondersContainer from "../containers/WondersContainer";
+import MapBox from '../components/MapBox.js'
 
 const Map = () => {
     return (
@@ -12,6 +13,9 @@ const Map = () => {
             </nav>
             <section id="content-1">
             <h2>Map</h2>
+            <div id="mapbox-div">
+                <MapBox />
+            </div>
             </section>
             <footer id="footer">
             <h3>Footer</h3>

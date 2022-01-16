@@ -14,7 +14,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "mongodb": "^3.5.7"
+    "leaflet": "^1.7.1",
+    "mongodb": "^3.5.7",
+    "react-leaflet": "^3.2.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
