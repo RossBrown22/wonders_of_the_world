@@ -65,88 +65,88 @@ return(
 
 <Marker position={[29.9792345,31.1320132]}>
         <Popup>
-        Great Pyramid of Giza <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Great Pyramid of Giza <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
     <Marker position={[32.4912413,44.435228]}>
         <Popup>
-        Hanging Gardens of Babylon <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Hanging Gardens of Babylon <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
     <Marker position={[37.9493601,27.3627619]}>
         <Popup>
-        Temple of Artemis <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Temple of Artemis <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
     <Marker position={[37.8022947,22.1210547]}>
         <Popup>
-        Statue of Zeus <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Statue of Zeus <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
     <Marker position={[37.0378874,27.4219277]}>
         <Popup>
-        Mausoleum At Halicarnassus  <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Mausoleum At Halicarnassus  <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
     <Marker position={[36.4509959,28.2236147]}>
         <Popup>
-        Colossus of Rhodes <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Colossus of Rhodes <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
     <Marker position={[31.2124397,29.887799]}>
         <Popup>
-        Lighthouse of Alexandria <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Lighthouse of Alexandria <br /> <Link to="/ancient"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
 
 {/* NATURAL */}
 
-<Marker position={[31.2124397,29.887799]}>
+<Marker position={[63.8793171,-22.4517288]}>
         <Popup>
-        Aurora Borealis <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Aurora Borealis <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
-    <Marker position={[31.2124397,29.887799]}>
+    <Marker position={[36.0997623,-112.1212394]}>
         <Popup>
-        Grand Canyon <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Grand Canyon <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
-    <Marker position={[31.2124397,29.887799]}>
+    <Marker position={[-19.3401041,145.40679]}>
         <Popup>
-        Great Barrier Reef <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Great Barrier Reef <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
-    <Marker position={[31.2124397,29.887799]}>
+    <Marker position={[-22.8197641,-43.2922626]}>
         <Popup>
-        Harbor of Rio de Janeiro  <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Harbor of Rio de Janeiro  <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
-    <Marker position={[31.2124397,29.887799]}>
+    <Marker position={[27.9881199,86.9162203]}>
         <Popup>
-        Mount Everest <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Mount Everest <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
-    <Marker position={[31.2124397,29.887799]}>
+    <Marker position={[19.4933462,-102.2601524]}>
         <Popup>
-        Paricutin Volcano <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Paricutin Volcano <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
-    <Marker position={[31.2124397,29.887799]}>
+    <Marker position={[-17.9270587,25.8437687]}>
         <Popup>
-        Victoria Falls <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Victoria Falls <br /> <Link to="/natural"><button type="button">Learn More</button></Link>
         </Popup>
     </Marker>
 
