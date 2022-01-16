@@ -21,6 +21,15 @@ const WondersContainer = () => {
         filterWonders()
     }, [wonders])
 
+    useEffect(() => {
+        loadFirstWonder()
+    }, [filteredWonders])
+
+    const loadFirstWonder = () => {
+        const firstWonder = filteredWonders[0];
+        setSelectedWonder(firstWonder);
+    }
+    
     const onWonderSelected=(wonder) => {
         setSelectedWonder(wonder) 
     }
