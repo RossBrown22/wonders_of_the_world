@@ -10,9 +10,14 @@ app.use(cors());
 MongoClient.connect('mongodb://localhost:27017', {useUnifiedTopology: true})
 .then((client) => {
     const db = client.db('wonders_db');
+
     const wondersCollection = db.collection('wonders');
     const wondersRouter = createRouter(wondersCollection);
     app.use('/api/wonders', wondersRouter);
+
+    const usersCollection = db.collection('users');
+    const usersRouter = createRouter(usersCollection);
+    app.use('/api/users', usersRouter);
 })
 .catch(console.error)
 

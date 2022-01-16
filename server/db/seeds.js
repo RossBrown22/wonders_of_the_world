@@ -1,6 +1,18 @@
 use wonders_db;
 db.dropDatabase();
 
+db.users.insertMany([
+    {
+        name: "Kirsten"
+    },
+    {
+        name: "Ross"
+    },
+    {
+        name: "Guilherme"
+    }
+])
+
 db.wonders.insertMany([
     {
         name: "Petra",
