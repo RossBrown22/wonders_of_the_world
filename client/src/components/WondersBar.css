@@ -1,10 +1,10 @@
-.wonder-wrapper {
+.wonder-bar {
     display: flex;
     flex-flow: column;
     width: 200px;
   }
 
-.wonder-detail {
+/* .wonder-detail {
   display: flex;
     flex-flow: column;
-}
+} */

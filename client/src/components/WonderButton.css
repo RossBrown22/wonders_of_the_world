@@ -1,0 +1,18 @@
+.wonder-button {
+    display: flex;
+    background-color: #3230bb;
+    color: white;
+    border: 3px solid rgb(23, 184, 23);
+    box-shadow: 3px 3px 3px #888888;
+    border-radius: 5px;
+    width: 200px;
+    height: 70px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .wonder-button p{
+    text-align: center;
+  }
