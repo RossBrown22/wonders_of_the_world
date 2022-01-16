@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:5000/api/users/';
+const baseURL = 'http://localhost:5000/api/users/'
 
 const UsersService = {
     getUsers () {

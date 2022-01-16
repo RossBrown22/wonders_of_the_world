@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import RegistrationForm from "../components/RegistrationForm";
 import SignInForm from "../components/SignInForm";
 import UsersService from "../services/UsersService";
 
@@ -27,14 +28,23 @@ const UsersContainer = () => {
         setCurrentUser(foundUser)
     }
 
+    const createUser = (newUser) => {
+        UsersService.postUser(newUser)
+        .then(savedUser => setUsers([...users, savedUser]))
+        setCurrentUser(newUser)
+    }
+
     return(
         <div>
             {formUser ? null : <>
-                <h2>Check if Registered</h2>
+                <h2>Sign In:</h2>
                 <SignInForm onSignInSubmit={addFormUser} />
                 </> }
             {currentUser ? <h2>Welcome to our website {currentUser.name}!</h2> : null }
-            {(!currentUser && formUser) ? <h2>Display Registration Form</h2> :  null}
+            {(!currentUser && formUser) ? <>
+                <h2>You are not registered</h2>
+                <h3>Ask a grown-up to do this bit with you</h3>
+                <RegistrationForm onRegistrationSubmit={createUser}/> </> :  null}
             
             
         </div>
