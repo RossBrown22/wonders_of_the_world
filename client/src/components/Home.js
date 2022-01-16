@@ -4,26 +4,9 @@ const Home = () => {
     return (
         <div className="home-page">
             <h1>The Wonders of The World</h1>
-            <button type="button" onClick={(e) => {
-            e.preventDefault();
-            window.location.href="http://localhost:3000/new";
-            }}>🕌<br />New</button>
-
-            <button type="button" onClick={(e) => {
-            e.preventDefault();
-            window.location.href="http://localhost:3000/ancient";
-            }}>🏛<br />Ancient</button>
-
-            <button type="button" onClick={(e) => {
-            e.preventDefault();
-            window.location.href="http://localhost:3000/natural";
-            }}>🏔<br />Natural</button>
-
-            <button type="button" onClick={(e) => {
-            e.preventDefault();
-            window.location.href="http://localhost:3000/quiz";
-            }}>📝<br />Quiz</button>
-
+            <a href="/new"><button type="button">🕌<br />New</button></a>
+            <a href="/ancient"><button type="button">🏛<br />Ancient</button></a>
+            <a href="/natural"><button type="button">🏔<br />Natural</button></a>
         <img src={"/img/Rotating_globe.gif"}></img>
         </div>
     )
