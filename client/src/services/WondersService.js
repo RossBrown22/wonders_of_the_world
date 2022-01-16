@@ -5,6 +5,6 @@ const WondersService = {
         return fetch(baseURL)
         .then(res => res.json());
     }
-}
+};
 
-export default WondersService
+export default WondersService;
