@@ -30,6 +30,11 @@ const NavBar = () => {
                     <button type="button">📝<br />Quiz</button>
                 </Link>
             </li>
+            <li>
+                <Link to="/map">
+                    <button type="button">🗺️<br />Map</button>
+                </Link>
+            </li>
         </ul>
     );
 }
