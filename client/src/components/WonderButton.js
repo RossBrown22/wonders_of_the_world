@@ -6,8 +6,8 @@ const WonderButton = ({wonder, onWonderSelected}) => {
     }
 
     return(
-        <div className="wonder-button">            
-            <p onClick={handleClick} >{wonder.name}</p>
+        <div>            
+            <button className="wonder-button" type="button" onClick={handleClick} >{wonder.name}</button>
         </div>
     )
 }
