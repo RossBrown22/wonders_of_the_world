@@ -1,0 +1,17 @@
+const Question = ({question, index, handleAnswerChange}) => {
+    const questionNumber = index + 1
+    return (
+        <>
+            <h3>{questionNumber} {question.question}</h3>
+
+            <label>{question.choices[0]}</label>
+            <input onChange={handleAnswerChange} name="question1" type="radio" value={question.choices[0]}/>
+            <label>{question.choices[1]}</label>
+            <input onChange={handleAnswerChange} name="question1" type="radio" value={question.choices[1]}/>
+            <label>{question.choices[2]}</label>
+            <input onChange={handleAnswerChange} name="question1" type="radio" value={question.choices[2]}/>
+        </>
+    )
+}
+
+export default Question;

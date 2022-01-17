@@ -1,35 +1,36 @@
 import { useState } from 'react'
+import Question from './Question'
 
 const QuizForm = ({questions, onQuizSubmit}) => {
 
     const [submittedAnswers, setSubmittedAnswers] = useState([])
 
     const handleAnswerChange = (evt) => {
-        setSubmittedAnswers(evt.target.value)
+        const currentAnswer = evt.target.value
+        setSubmittedAnswers([...submittedAnswers, currentAnswer])
     }
 
     const handleQuizSubmit = (evt) => {
         evt.preventDefault()
 
-        onQuizSubmit({
-            submittedAnswers: submittedAnswers
-        })
+        onQuizSubmit(submittedAnswers)
+        setSubmittedAnswers([])
     }
 
     return (
         <div>
             <h1>This is the quiz form!</h1>
             <form onSubmit={handleQuizSubmit}>
-                <h3>1. {questions[0].question}</h3>
-
-                <label>{questions[0].choices[0]}</label>
-                <input onChange={handleAnswerChange} name="question1" type="radio" value={questions[0].choices[0]}/>
-
-                <label>{questions[0].choices[1]}</label>
-                <input onChange={handleAnswerChange} name="question1" type="radio" value={questions[0].choices[1]}/>
-
-                <label>{questions[0].choices[2]}</label>
-                <input onChange={handleAnswerChange} name="question1" type="radio" value={questions[0].choices[2]}/>
+                
+            <div>
+                {questions.map((question, index) => {
+                    return (
+                    <div key={index}>
+                         <Question question={question} index={index} handleAnswerChange={handleAnswerChange}/>
+                    </div> 
+                    )
+                })}
+            </div>
 
                 <button type="submit">Submit</button>
             </form>
