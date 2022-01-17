@@ -1,8 +1,27 @@
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import {Link} from 'react-router-dom'
+import L from 'leaflet'
+import Icon_new_wonders from '../icons/Icon_new_wonders.png'
+
 
 const MapBox = () => {
+
+
+// const icon_new='🕌'
+
+// const icon_new = L.icon({
+//     iconUrl: {Icon_new_wonders},
+//     iconSize: [38, 38],
+// });
+
+// console.log(Icon_new_wonders);
+
+// return(
+//     <div>
+//     <img src='../icons/Icon_new_wonders.png'/>
+//     </div>
+// )
 
 return(
 
