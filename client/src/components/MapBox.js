@@ -31,7 +31,8 @@ const icon_natural = L.icon({
 
 return(
 
-<MapContainer center={[10.000, 0.00]} zoom={2} scrollWheelZoom={true} minZoom={2} maxZoom={14} maxBoundsViscosity={1}
+<MapContainer center={[10.000, 0.00]} zoom={2} scrollWheelZoom={true} 
+minZoom={2} maxZoom={14} maxBoundsViscosity={1} noWrap={true} maxBounds={[-90, -180],[90, 180]}
 
 >
 

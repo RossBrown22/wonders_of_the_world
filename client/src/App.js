@@ -8,6 +8,7 @@ import Quiz from './components/Quiz';
 import Map from './components/Map';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import UsersService from './services/UsersService';
+import WondersService from './services/WondersService';
 
 function App() {
   const [users, setUsers] = useState([])
@@ -38,13 +39,55 @@ function App() {
     setCurrentUser(newUser)
   }
 
+
+
+
+
+  const [wonders, setWonders] = useState([]);
+  const [selectedWonder, setSelectedWonder] = useState(null);
+  // const [filteredWonders, setFilteredWonders] = useState([]);
+  
+
+  useEffect(() => {
+      WondersService.getWonders()
+      .then(wonders => setWonders(wonders))
+  }, []);
+
+  // useEffect(() => {
+  //     filterWonders()
+  // }, [wonders]);
+
+  // useEffect(() => {
+  //     loadFirstWonder()
+  // }, [filteredWonders]);
+
+  // const loadFirstWonder = () => {
+  //     const firstWonder = filteredWonders[0];
+  //     setSelectedWonder(firstWonder);
+  // };
+  
+  const onWonderSelected=(wonder) => {
+      setSelectedWonder(wonder);
+  };
+
+  // const filterWonders = () => {
+  //     const pathname = window.location.pathname;
+  //     const result = wonders.filter(wonder => wonder.collection ===pathname);
+  //     setFilteredWonders(result);
+  // };
+
+
+
+
+
   return (
     <div className='background-img'>
     <Router>
     <>
       <Route exact path="/" render={() => {
         return <Home addFormUser={addFormUser} createUser={createUser} currentUser={currentUser} formUser={formUser}/>}} />
-      <Route exact path="/new" component={New} />
+      <Route exact path="/new" render={() => {
+        return <New wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} /> }} />
       <Route exact path="/ancient" component={Ancient} />
       <Route exact path="/natural" component={Natural} />
       <Route exact path="/quiz" component={Quiz} />

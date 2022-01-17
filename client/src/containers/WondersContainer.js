@@ -5,34 +5,34 @@ import WonderDetail from '../components/WonderDetail';
 import './WondersContainer.css';
 
 
-const WondersContainer = () => {
+const WondersContainer = ({wonders, selectedWonder, onWonderSelected}) => {
     
-    const [wonders, setWonders] = useState([]);
-    const [selectedWonder, setSelectedWonder] = useState(null);
+    // const [wonders, setWonders] = useState([]);
+    // const [selectedWonder, setSelectedWonder] = useState(null);
     const [filteredWonders, setFilteredWonders] = useState([]);
     
 
-    useEffect(() => {
-        WondersService.getWonders()
-        .then(wonders => setWonders(wonders))
-    }, []);
+    // useEffect(() => {
+    //     WondersService.getWonders()
+    //     .then(wonders => setWonders(wonders))
+    // }, []);
 
     useEffect(() => {
         filterWonders()
     }, [wonders]);
 
-    useEffect(() => {
-        loadFirstWonder()
-    }, [filteredWonders]);
+    // useEffect(() => {
+    //     loadFirstWonder()
+    // }, [filteredWonders]);
 
-    const loadFirstWonder = () => {
-        const firstWonder = filteredWonders[0];
-        setSelectedWonder(firstWonder);
-    };
+    // const loadFirstWonder = () => {
+    //     const firstWonder = filteredWonders[0];
+    //     setSelectedWonder(firstWonder);
+    // };
     
-    const onWonderSelected=(wonder) => {
-        setSelectedWonder(wonder);
-    };
+    // const onWonderSelected=(wonder) => {
+    //     setSelectedWonder(wonder);
+    // };
 
     const filterWonders = () => {
         const pathname = window.location.pathname;
