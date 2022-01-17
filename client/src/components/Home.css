@@ -7,6 +7,30 @@
     left: 0;
     right: 0;
 }
+.home-page-content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+.home-page-content img{
+    width: 30%;
+    margin: auto;
+}
+
+.home-page-content h1{
+    margin: auto;
+}
+
+.sign-in-button{
+    width: 200px;
+    height: 100px;
+    font-size: 40px;
+    font-weight: 900;
+    border-radius: 8px;
+    margin: auto;
+}
 
 .front-btn {
     text-align: center;
