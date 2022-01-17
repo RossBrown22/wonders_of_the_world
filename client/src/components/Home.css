@@ -6,6 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    font-family: 'Mochiy Pop P One', sans-serif;;
 }
 .home-page-content{
     display: flex;
@@ -21,6 +22,8 @@
 
 .home-page-content h1{
     margin: auto;
+    font-size: 60px;
+    color: rgb(70, 69, 69);
 }
 
 .sign-in-button{

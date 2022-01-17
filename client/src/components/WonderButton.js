@@ -3,6 +3,7 @@ import './WonderButton.css'
 const WonderButton = ({wonder, onWonderSelected}) => {
     const handleClick=() => {
         onWonderSelected(wonder)
+        console.log(wonder);
     }
 
     return(

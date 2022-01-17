@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import {Link} from 'react-router-dom'
 import L from 'leaflet'
@@ -10,9 +10,25 @@ import MarkerIcon from './MarkerIcon'
 
 const MapBox = (onWonderSelected, wonders) => {
 
-// const handleClick=() => {
-//     onWonderSelected(wonder)
-// }
+    const markers= {
+        coords: [
+          { lat: 41.19197, lng: 25.33719 },
+          { lat: 41.26352, lng: 25.1471 },
+          { lat: 41.26365, lng: 25.24215 },
+          { lat: 41.26369, lng: 25.33719 },
+          { lat: 41.26365, lng: 25.43224 },
+          { lat: 41.26352, lng: 25.52728 },
+          { lat: 41.2633, lng: 25.62233 },
+          { lat: 41.263, lng: 25.71737 },
+          { lat: 41.3082, lng: 22.95892 },
+          { lat: 41.31041, lng: 23.054 }
+        ],
+        zoom: 7
+      }; 
+    
+    // const handleClick=() => {
+    // onWonderSelected(wonder)
+    // }
 
 
 const icon_new = L.icon({
@@ -32,6 +48,8 @@ const icon_natural = L.icon({
 });
 
 
+
+
 return(
 
 <MapContainer center={[10.000, 0.00]} zoom={2} scrollWheelZoom={true} 
@@ -45,15 +63,35 @@ minZoom={2} maxZoom={14} maxBoundsViscosity={1} noWrap={true} maxBounds={[-90, -
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         
     />
+
+    {markers.coords.map(({ lat, lng }, index) => (
+      <Marker position={[lat, lng]}  key={index}>
+          <Popup>
+            {index + 1} is for popup with lat: {lat} and lon {lng}
+          </Popup>
+      </Marker>
+    ))}
+
+    {wonders  ? 
+    wonders.map((wonder) => {
+
+        <Marker position={[wonder.coords.lat, wonder.coords.lng]}  key={wonder._id} icon={icon_new}>
+            <Popup>
+              {wonder.name} <br /> <Link to={wonder.collection}><button type="button" >Learn More</button></Link>
+          </Popup>
+        </Marker>
+    })
+     : null}
+    
     
 
-    {wonders.map(wonder => {
+    {/* {wonders.map(wonder => {
         return(
 
                 <MarkerIcon wonder={wonder} onWonderSelected={onWonderSelected}/>
             
         )
-    })}
+    })} */}
 
 
 

@@ -22,7 +22,9 @@ db.wonders.insertMany([
                 "The city is nicknamed Rose city because it is carved from pink coloured rock."],
         funFact: "Inside, the high rock walls reach 262 feet into the air, which is the equivalent to 14 giraffe standing on top of each other).",
         collection: "/new",
-        image: "Petra.jpeg"
+        image: "Petra.jpeg",
+        coords: {lat: 30.323337, lng: 35.451666},
+        icon: "icon_new"
     },
     {
         name: "Great Wall",
@@ -31,7 +33,9 @@ db.wonders.insertMany([
                 "It took almost 2000 years to build and maintain the wall.", "It was built for kingdom defenses, to defend China's northern border, and also for tourism."],
         funFact: "The total length of all sections of the Great Wall of China adds up to about 13,171 miles, which is the equivalent to 439 elephants from tail to trunk.",
         collection: "/new",
-        image: "GreatWall.jpeg"
+        image: "GreatWall.jpeg",
+        coords: {lat: 40.4319077, lng: 116.5681862},
+        icon: "icon_new"
     },
     {
         name: "Christ the Redeemer",
@@ -39,7 +43,9 @@ db.wonders.insertMany([
         facts: ["It began construction in 1926 and was completed in 1931.", "It was made with 6 million soapstone tiles.", "It was requested that the statue be built so it would be visible from anywhere and everywhere in Rio de Janeiro."],
         funFact: "It stands at 98 feet tall, which is the same length as a Boeing 737 Aeroplane!",
         collection: "/new",
-        image: "ChristtheRedeemer.jpeg"
+        image: "ChristtheRedeemer.jpeg",
+        coords: {lat: -22.951916, lng: -43.2126759},
+        icon: "icon_new"
     },
     {
         name: "Colosseum",
@@ -47,7 +53,9 @@ db.wonders.insertMany([
         facts: ["It was built in the 1st century.", "6 million people visit it each year.", "It only took nine years to build!"],
         funFact: "It was originally used for gladiators to see who was the strongest fighter!",
         collection: "/new",
-        image: "Colosseum.jpeg"
+        image: "Colosseum.jpeg",
+        coords: {lat: 41.8902821, lng: 12.4878589},
+        icon: "icon_new"
     },
     {
         name: "Machu Pichu",
@@ -55,7 +63,9 @@ db.wonders.insertMany([
         facts: ["It was discovered by the western world in 1911.", "The Incan City is believed to have been inhabited in the 1600s.", "It was built to serve as a royal retreat, although its purpose is ultimately unknown."],
         funFact: "It is located at an altitude of 2400 meters, which is the equivalent to 524 double decker buses!",
         collection: "/new",
-        image: "MachuPicchu.jpeg"
+        image: "MachuPicchu.jpeg",
+        coords: {lat: -13.1631412, lng: -72.5471516},
+        icon: "icon_new"
     },
     {
         name: "Chichen Itza",
@@ -63,7 +73,9 @@ db.wonders.insertMany([
         facts: ["It dates back to the 9th century.", "The main pyramid nests multiple smaller pyramids inside it.", "Originally it became an important commercial centre, trading in goods - including gold and other treasures."],
         funFact: "The Great Pyramid also has 365 steps, which is 24 times the amount of an average house!",
         collection: "/new",
-        image: "ChichenItza.jpeg"
+        image: "ChichenItza.jpeg",
+        coords: {lat: 20.6787816, lng: -88.5706656},
+        icon: "icon_new"
     },
     {
         name: "Taj Mahal",
@@ -71,7 +83,9 @@ db.wonders.insertMany([
         facts: ["It was completed in 1658 by Emperor Shah Jahn who built it for his wife.", "Became one of the 7 wonders in 2007, (after being voted by the public).", "In order to protect the Taj Mahal from the harmful effects of pollution, all motor vehicles MUST stay 500 meters away."],
         funFact: "In 1600 it cost 314 million pounds to build - which in 2022 is the equivalent to 3 billion, 579 million pounds!",
         collection: "/new",
-        image: "TajMahal.jpeg"
+        image: "TajMahal.jpeg",
+        coords: {lat: 27.1751448, lng: 78.0399535},
+        icon: "icon_new"
     },
     {
         name: "Great Pyramid of Giza",
