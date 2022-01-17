@@ -2,19 +2,19 @@ import NavBar from "./NavBar";
 import WondersContainer from "../containers/WondersContainer";
 import MapBox from '../components/MapBox.js'
 
-const Map = () => {
+const Map = ({onWonderSelected, wonders}) => {
     return (
         <div id="grid">
             <header id="header">
-                <h1>The 7 Ancient Wonders of the World</h1>
+                <h1>The 21 Wonders of the World</h1>
             </header>
             <nav id="nav-bar">
             <NavBar />
             </nav>
             <section id="content-1">
-            <h2>Find your Favourite Wonder</h2>
+            <h2>Find your Favourite Wonder!</h2>
             <div id="mapbox-div">
-                <MapBox />
+                <MapBox onWonderSelected={onWonderSelected} wonders={wonders}/>
             </div>
             </section>
             <footer id="footer">

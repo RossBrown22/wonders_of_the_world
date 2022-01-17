@@ -5,11 +5,14 @@ import L from 'leaflet'
 import Icon_new_wonders1 from '../icons/Icon_new_wonders1.png'
 import Icon_natural_wonders1 from '../icons/Icon_natural_wonders1.png'
 import Icon_ancient_wonders1 from '../icons/Icon_ancient_wonders1.png'
+import MarkerIcon from './MarkerIcon'
 
 
-const MapBox = () => {
+const MapBox = (onWonderSelected, wonders) => {
 
-
+// const handleClick=() => {
+//     onWonderSelected(wonder)
+// }
 
 
 const icon_new = L.icon({
@@ -44,14 +47,23 @@ minZoom={2} maxZoom={14} maxBoundsViscosity={1} noWrap={true} maxBounds={[-90, -
     />
     
 
+    {wonders.map(wonder => {
+        return(
+
+                <MarkerIcon wonder={wonder} onWonderSelected={onWonderSelected}/>
+            
+        )
+    })}
+
+
 
 {/* NEW  */}
 
-    <Marker position={[30.323337, 35.451666]} icon={icon_new}>
+    {/* <Marker position={[30.323337, 35.451666]} icon={icon_new}>
         <Popup>
-        Petra <br /> <Link to="/new"><button type="button">Learn More</button></Link>
+        Petra <br /> <Link to="/new"><button type="button" onClick={handleClick}>Learn More</button></Link>
         </Popup>
-    </Marker>
+    </Marker> */}
 
 
     <Marker position={[40.4319077,116.5681862]} icon={icon_new}>

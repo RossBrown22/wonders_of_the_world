@@ -91,7 +91,9 @@ function App() {
       <Route exact path="/ancient" component={Ancient} />
       <Route exact path="/natural" component={Natural} />
       <Route exact path="/quiz" component={Quiz} />
-      <Route exact path="/map" component={Map} />
+      <Route exact path="/map" render={() => {
+        return <Map onWonderSelected={onWonderSelected} wonders={wonders}/>
+      }} />
     </>
     </Router>
     </div>
