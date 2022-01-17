@@ -27,12 +27,15 @@ const QuizContainer = () => {
     }
 
     const compareAnswers = () => {
+        let currentScore = 0
         questions.forEach((question, index) => {
+            console.log("HELP");
             if (submittedAnswers && question.answer === submittedAnswers[index]){
-                const currentScore = score + 1
-                setScore(currentScore)
+                currentScore = score + 1
+                console.log(currentScore);
             }
         })
+        setScore(currentScore)
     }
 
     return (

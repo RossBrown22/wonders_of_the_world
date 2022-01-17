@@ -5,11 +5,11 @@ const Question = ({question, index, handleAnswerChange}) => {
             <h3>{questionNumber} {question.question}</h3>
 
             <label>{question.choices[0]}</label>
-            <input onChange={handleAnswerChange} name="question1" type="radio" value={question.choices[0]}/>
+            <input onChange={handleAnswerChange} name={index} type="radio" value={question.choices[0]}/>
             <label>{question.choices[1]}</label>
-            <input onChange={handleAnswerChange} name="question1" type="radio" value={question.choices[1]}/>
+            <input onChange={handleAnswerChange} name={index} type="radio" value={question.choices[1]}/>
             <label>{question.choices[2]}</label>
-            <input onChange={handleAnswerChange} name="question1" type="radio" value={question.choices[2]}/>
+            <input onChange={handleAnswerChange} name={index} type="radio" value={question.choices[2]}/>
         </>
     )
 }
