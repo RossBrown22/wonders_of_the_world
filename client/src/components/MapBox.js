@@ -16,7 +16,7 @@ return(
 
 {/* NEW  */}
 
-    <Marker position={[30.323337, 35.451666]}>
+    <Marker position={[30.323337, 35.451666]} >
         <Popup>
         Petra <br /> <Link to="/new"><button type="button">Learn More</button></Link>
         </Popup>
