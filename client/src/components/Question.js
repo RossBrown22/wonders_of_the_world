@@ -2,7 +2,7 @@ const Question = ({question, index, handleAnswerChange}) => {
     const questionNumber = index + 1
     return (
         <>
-            <h3>{questionNumber} {question.question}</h3>
+            <h3>{questionNumber}. {question.question}</h3>
 
             <label>{question.choices[0]}</label>
             <input onChange={handleAnswerChange} name={index} type="radio" value={question.choices[0]}/>

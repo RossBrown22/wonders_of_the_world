@@ -1,6 +1,6 @@
 .background-img {
-    background-image: url(/public/img/background.jpeg);
-    background-size: cover;
+    background-image: url(/public/img/wonderchange.gif);
+    /* background-size: cover; */
     background-repeat: no-repeat;
     position: absolute;
     top: 0;
