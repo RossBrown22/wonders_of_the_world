@@ -31,7 +31,6 @@ const QuizForm = ({questions, onQuizSubmit}) => {
                     )
                 })}
             </div>
-
                 <button type="submit">Submit</button>
             </form>
         </div>
