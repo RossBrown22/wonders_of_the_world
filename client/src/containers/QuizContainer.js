@@ -61,7 +61,10 @@ const QuizContainer = () => {
         <div>
             <h1>This is the quiz container!</h1>
             <QuizForm questions={questions} onQuizSubmit={onQuizSubmit}/>
-            {submittedAnswers ? <h2>{medalAward()}</h2> : null}
+            {submittedAnswers ? <>
+            <h2>{medalAward()}</h2>
+            <h3>{score}/3</h3>
+            </> : null}
         </div>
         </>
     ) 
