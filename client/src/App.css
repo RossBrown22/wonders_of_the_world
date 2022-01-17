@@ -38,7 +38,14 @@
 .leaflet-container{
   width: 70vw;
   height: 75vh;
-  
+
+}
+
+#mapbox-div {
+/* padding-left: 250px; */
+/* margin: auto; */
+display: flex;
+justify-content: center;
 }
 
 /* #mapbox-div {

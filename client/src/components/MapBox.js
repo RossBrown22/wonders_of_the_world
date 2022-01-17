@@ -5,12 +5,13 @@ import {Link} from 'react-router-dom'
 const MapBox = () => {
 
 return(
-<MapContainer center={[51.505, -0.09]} zoom={3} scrollWheelZoom={true}>
+
+<MapContainer center={[10.000, 0.00]} zoom={2} scrollWheelZoom={true}>
     <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-
+    
 
 
 {/* NEW  */}

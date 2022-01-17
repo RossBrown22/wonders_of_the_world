@@ -12,7 +12,7 @@ const Map = () => {
             <NavBar />
             </nav>
             <section id="content-1">
-            <h2>Map</h2>
+            <h2>Find your Favourite Wonder</h2>
             <div id="mapbox-div">
                 <MapBox />
             </div>
