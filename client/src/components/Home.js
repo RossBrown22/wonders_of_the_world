@@ -3,7 +3,7 @@ import PopUpWindow from './PopUpWindow';
 import './Home.css'
 import { useState } from 'react';
 
-const Home = () => {
+const Home = ({addFormUser, createUser, currentUser, formUser}) => {
     const [popUpOpen, setPopUpOpen] = useState(false)
     
     const togglePopUpWindow = () => {
@@ -16,7 +16,7 @@ const Home = () => {
             <h1>The Wonders of The World</h1>
             <img src={"/img/Rotating_globe.gif"}></img>
             <button className="sign-in-button" type="button" onClick={togglePopUpWindow}>Sign-in</button> 
-            {popUpOpen && <PopUpWindow content={<UsersContainer />} handlePopUpClose={togglePopUpWindow}/>}
+            {popUpOpen && <PopUpWindow content={<UsersContainer addFormUser={addFormUser} createUser={createUser} currentUser={currentUser} formUser={formUser}/>} handlePopUpClose={togglePopUpWindow}/>}
             </div>
             <div className='front-btn'>
                 <a href="/new"><button type="button"><span>🕌<br />New</span></button></a>
