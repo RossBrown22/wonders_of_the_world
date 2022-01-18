@@ -3,20 +3,31 @@
     width: 200px;
     margin-left: 100px;
     margin-top: 50px;
+    border: rgb(23, 144, 157) solid 3px;
+    border-radius: 10px;
 }
+
+.wonder-detail p {
+    font-size: 20px;
+    /* border: rgb(23, 144, 157) solid 3px; */
+}
+
 
 .both-pics {
     display: flex;
     margin:auto
+    /* border: rgb(23, 144, 157) solid 3px; */
 }
 
 .wonder-detail {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgba(249, 222, 166, 1) 80%);
-    background-color: rgb(199, 218, 218);
+    background-color: rgb(225, 225, 225);
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0) 15%, rgba(249, 222, 166, 1) 80%);
+    background-color: rgb(199, 218, 218); */
     /* background-color: rgb(223, 201, 199); */
-    width: 80%;
+    width: fit-content;
     margin: auto;
-    border: black solid 3px;
-    padding-left: 100px;
-    padding-right: 30px;
+    border: rgb(23, 144, 157) solid 3px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
 }
