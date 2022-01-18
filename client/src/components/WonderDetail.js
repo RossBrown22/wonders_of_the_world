@@ -62,31 +62,50 @@ const WonderDetail = ({wonder}) => {
         )
     }
 
+
+// const style = {
+//     play: {
+//         button: {
+//         width: '28',
+//         height: '28',
+//         cursor: 'pointer',
+//         pointerEvents: 'none',
+//         outline: 'none',
+//         backgroundColor: 'yellow',
+//         border: 'solid 1px rgba(255,255,255,1)',
+//         borderRadius: 6
+//       },
+//     }
+//   };
+  
+
+
     return(
         <div className='wonder-detail'>
-            <h2>{wonder.name}</h2>
+            <h2><Speech text={sayNameAndLocation()} textAsButton={true} displayText="▶" voice="Google UK English Female" />
+{wonder.name}</h2>
             <h3>{wonder.location}</h3>
-            <Speech text={sayNameAndLocation()} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
-
+            
             <div className='both-pics'>
                 <PuzzlePic wonder={wonder} key={puzzleKey}/>
                 <img className="complete-img" src={`/img/${wonder.image}`} alt={wonder.name} />
             </div>
             
             
-            <p><i onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[0]}</p>
+            <p><i onClick={handleClickFact1}><Speech text={wonder.facts[0]} textAsButton={true} displayText="▶" voice="Google UK English Female" /></i>{wonder.facts[0]}</p>
 
-            <p><i onClick={handleClickFact2}><Speech text={wonder.facts[1]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[1]}</p>
+            <p><i onClick={handleClickFact2}><Speech text={wonder.facts[1]} textAsButton={true} displayText="▶" voice="Google UK English Female" /></i>{wonder.facts[1]}</p>
 
-            <p><i onClick={handleClickFact3}><Speech text={wonder.facts[2]} textAsButton={true} displayText="▶️" voice="Google UK English Female" /></i>{wonder.facts[2]}</p>
+            <p><i onClick={handleClickFact3}><Speech text={wonder.facts[2]} textAsButton={true} displayText="▶" voice="Google UK English Female" /></i>{wonder.facts[2]}</p>
                 
             {funFactUnlocked ? 
                 <>
                     <h3>⭐️ Well Done! You Unlocked the Fact!⭐️ </h3>
-                    <p>{wonder.funFact}</p> 
+                    <p><Speech text={(wonder.funFact)} textAsButton={true} displayText="▶" voice="Google UK English Female" />
+{wonder.funFact}</p> 
                 </>: 
                     <h3>🔒 Listen to all 3 facts above to unlock crazy fact! 🔒</h3> }
- 
+
         </div>
     )
 }
