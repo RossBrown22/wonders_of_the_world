@@ -13,8 +13,8 @@ const UsersContainer = ({ addFormUser, createUser, currentUser, formUser }) => {
             {currentUser ? <h2>Welcome to our website {currentUser.name}!</h2> : null}
             {(!currentUser && formUser) ? <>
                 <h2>You are not registered</h2>
-                <h3>Ask a grown-up to do this bit with you</h3>
-                <RegistrationForm onRegistrationSubmit={createUser} /> </> : null}
+                <h3>👨‍👧Ask a grown-up to do this bit with you👩‍👦</h3>
+                <RegistrationForm formUser={formUser} onRegistrationSubmit={createUser} /> </> : null}
         </div>
     )
 }
