@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Question from './Question'
 import Confetti from 'react-confetti'
+import useSound from 'use-sound';
 
 const QuizForm = ({ questions, onQuizSubmit }) => {
 
@@ -24,7 +25,7 @@ const QuizForm = ({ questions, onQuizSubmit }) => {
     }
 
     return (
-        <div>
+        <div className='questions'>
             {confettiOn ? <Confetti width={1750} height={920} /> : null}
             <h1>This is the quiz form!</h1>
             <form onSubmit={handleQuizSubmit}>
