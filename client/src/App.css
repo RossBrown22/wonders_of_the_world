@@ -9,6 +9,10 @@
     right: 0;
 }
 
+.background-color {
+  background-color: rgb(249, 222, 166);
+}
+
 #header {
   grid-area: header;
 }
@@ -38,17 +42,14 @@
 .leaflet-container{
   width: 70vw;
   height: 75vh;
-
 }
 
 #mapbox-div {
-/* padding-left: 250px; */
-/* margin: auto; */
-display: flex;
-justify-content: center;
-}
 
-/* #mapbox-div {
-  width: 50%;
-  height: 50%
-} */
+  display: flex;
+  justify-content: center;
+  }
+  
+
+
+
