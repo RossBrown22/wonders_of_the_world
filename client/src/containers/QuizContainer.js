@@ -1,10 +1,20 @@
 import { useState, useEffect } from 'react'
 import QuizForm from '../components/QuizForm'
 import './QuizContainer.css'
+import PopUpWindow from '../components/PopUpWindow'
+import QuizResult from '../components/QuizResult'
 
 const QuizContainer = () => {
     const [submittedAnswers, setSubmittedAnswers] = useState(null)
     const [score, setScore] = useState(0)
+    const [popUpOpen, setPopUpOpen] = useState(false)
+    
+    const togglePopUpWindow = () => {
+        setPopUpOpen(!popUpOpen)
+    }
+
+
+
     const questions = [{
             question: "Which country is Petra in?",
             choices: ["China", "Brazil", "Jordan"],
@@ -53,6 +63,7 @@ const QuizContainer = () => {
 
     const onQuizSubmit = (submittedAnswers) => {
         setSubmittedAnswers(submittedAnswers)
+        togglePopUpWindow()
     }
 
     const compareAnswers = () => {
@@ -88,15 +99,13 @@ const QuizContainer = () => {
         return medal
     }
 
+
     return (
         <>
         <div>
             <QuizForm questions={questions} onQuizSubmit={onQuizSubmit}/>
-            {submittedAnswers ? <>
-            <h2 className='you-have-won'>YOU HAVE WON</h2>
-            <h2 className='medal'>{medalAward()}</h2>
-            <h3 className='score'>{score}/9</h3>
-            </> : null}
+
+            {popUpOpen && <PopUpWindow content={<QuizResult score={score} medalAward={medalAward}/>} handlePopUpClose={togglePopUpWindow}/>}
         </div>
         </>
     ) 
