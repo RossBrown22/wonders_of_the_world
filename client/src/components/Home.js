@@ -15,14 +15,17 @@ const Home = ({addFormUser, createUser, currentUser, formUser}) => {
             <div className="home-page-content">
             <h1>The Wonders of The World</h1>
             <img src={"/img/wonderlogo.gif"}></img>
-            <button className="sign-in-button" type="button" onClick={togglePopUpWindow}>Sign-in</button> 
+            {!currentUser ? <button className="sign-in-button" type="button" onClick={togglePopUpWindow}>Sign-in</button> : null}
             {popUpOpen && <PopUpWindow content={<UsersContainer addFormUser={addFormUser} createUser={createUser} currentUser={currentUser} formUser={formUser}/>} handlePopUpClose={togglePopUpWindow}/>}
             </div>
+            {currentUser ?
             <div className='front-btn'>
-                <a href="/new"><button type="button"><span>🕌<br />New</span></button></a>
-                <a href="/ancient"><button type="button"><span>🏛<br />Ancient</span></button></a>
-                <a href="/natural"><button type="button"><span>🏔<br />Natural</span></button></a>
-            </div>
+            <a href="/new"><button type="button"><span>🕌<br />New</span></button></a>
+            <a href="/ancient"><button type="button"><span>🏛<br />Ancient</span></button></a>
+            <a href="/natural"><button type="button"><span>🏔<br />Natural</span></button></a>
+        </div>
+            : null}
+            
         </div>
     )
 }
