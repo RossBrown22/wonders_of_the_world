@@ -40,7 +40,7 @@ const QuizForm = ({ questions, onQuizSubmit }) => {
                         )
                     })}
                 </div>
-                <button onClick={handleConfetti} type="submit">Submit</button>
+                <button className='submit-quiz' onClick={handleConfetti} type="submit">Submit</button>
             </form>
         </div>
     )
