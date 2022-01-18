@@ -14,7 +14,8 @@ ul li button {
     font-size: 25px;
     min-width: 100px;
     transition-duration: 0.4s;
-    border-radius: 5px
+    border-radius: 5px;
+    font-family: 'Mochiy Pop P One', sans-serif;;
 }
 
 ul li button:hover {

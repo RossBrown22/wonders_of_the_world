@@ -10,6 +10,11 @@ import MarkerIcon from './MarkerIcon'
 
 const MapBox = ({onWonderSelected, wonders}) => {
 
+    const handleClick = (evt) => {
+        const index = evt.target.value
+        onWonderSelected(wonders[index])
+    }
+
     const markers = {
         coords: [
             { lat: 41.19197, lng: 25.33719 },
@@ -48,27 +53,21 @@ const MapBox = ({onWonderSelected, wonders}) => {
     });
 
 
-    const markerNodes = () => {
+    const markerNodes = 
         wonders.map((wonder, index) => {
-            console.log("help!!")
-            console.log(wonder);
-            console.log(wonder.coords.lat);
-            console.log(wonder.coords.lng);
-            console.log(icon_new);
-            console.log(wonder.name);
+            
             return(
-                <p>Hello</p>
-            // <Marker key={index} position={[wonder.coords.lat, wonder.coords.lng]} icon={icon_new}>
-            //     <Popup>
-            //         {wonder.name} <br /> <Link to={wonder.collection}><button type="button" >Learn More</button></Link>
-            //     </Popup>
-            // </Marker>
+                
+            <Marker key={index} position={[wonder.coords.lat, wonder.coords.lng]} icon={icon_new}>
+                <Popup>
+                    {wonder.name} <br /> <Link to={wonder.collection}><button value={index} onClick={handleClick} type="button" >Learn More</button></Link>
+                </Popup>
+            </Marker>
             )
         })
-    }
+    
 
-    const call_markers = markerNodes()
-    console.log(call_markers);
+
 
     return (
 
@@ -92,7 +91,7 @@ const MapBox = ({onWonderSelected, wonders}) => {
                 </Marker>
             ))}
 
-            
+            {markerNodes}
 
 
 
