@@ -3,36 +3,35 @@ import RegistrationForm from "../components/RegistrationForm";
 import SignInForm from "../components/SignInForm";
 import UsersService from "../services/UsersService";
 
-const UsersContainer = () => {
+const UsersContainer = ({addFormUser, createUser, currentUser, formUser}) => {
     
-    const [users, setUsers] = useState([])
-    const [formUser, setFormUser] = useState(null)
-    const [currentUser, setCurrentUser] = useState(null)
+    // const [users, setUsers] = useState([])
+    // const [formUser, setFormUser] = useState(null)
+    // const [currentUser, setCurrentUser] = useState(null)
 
-    useEffect(() => {
-        UsersService.getUsers()
-        .then(users => setUsers(users))
-    }, []);
+    // useEffect(() => {
+    //     UsersService.getUsers()
+    //     .then(users => setUsers(users))
+    // }, []);
 
-    useEffect(() => {
-        console.log("hello");
-        checkIfRegistered() 
-    }, [formUser])
+    // useEffect(() => {
+    //     checkIfRegistered() 
+    // }, [formUser])
 
-    const addFormUser = (submittedUser) => {
-        setFormUser(submittedUser)
-    }
+    // const addFormUser = (submittedUser) => {
+    //     setFormUser(submittedUser)
+    // }
 
-    const checkIfRegistered = () => {
-        const foundUser = users.find(element => element.name == formUser.name);
-        setCurrentUser(foundUser)
-    }
+    // const checkIfRegistered = () => {
+    //     const foundUser = users.find(element => element.name == formUser.name);
+    //     setCurrentUser(foundUser)
+    // }
 
-    const createUser = (newUser) => {
-        UsersService.postUser(newUser)
-        .then(savedUser => setUsers([...users, savedUser]))
-        setCurrentUser(newUser)
-    }
+    // const createUser = (newUser) => {
+    //     UsersService.postUser(newUser)
+    //     .then(savedUser => setUsers([...users, savedUser]))
+    //     setCurrentUser(newUser)
+    // }
 
     return(
         <div>
