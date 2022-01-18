@@ -11,5 +11,6 @@
 
 .wonder-detail {
     background-color: aquamarine;
-    width: 50%;
+    width: 80%;
+    margin: auto;
 }
