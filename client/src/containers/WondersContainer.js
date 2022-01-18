@@ -30,10 +30,13 @@ const WondersContainer = ({ wonders, selectedWonder, onWonderSelected }) => {
     };
 
     return (
-        <div className="main-container">
+        <div id="main-container">
+            <div className="wonder-bar">
             <WondersBar wonders={filteredWonders} onWonderSelected={onWonderSelected} />
-
+            </div>
+            <div id="wonder-detail">
             {selectedWonder ? <WonderDetail wonder={selectedWonder} /> : null}
+            </div>
         </div>
     );
 };

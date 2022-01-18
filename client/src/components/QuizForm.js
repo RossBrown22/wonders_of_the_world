@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import Question from './Question'
+import Confetti from 'react-confetti'
 
-const QuizForm = ({questions, onQuizSubmit}) => {
+const QuizForm = ({ questions, onQuizSubmit }) => {
 
-    const [submittedAnswers, setSubmittedAnswers] = useState([])
+    const [submittedAnswers, setSubmittedAnswers] = useState({})
+    const [confettiOn, setConfettiOn] = useState(false)
 
     const handleAnswerChange = (evt) => {
         const currentAnswer = evt.target.value
-        setSubmittedAnswers([...submittedAnswers, currentAnswer])
+        const answerIndex = evt.target.name
+        const copySubmittedAnswers = {...submittedAnswers}
+        copySubmittedAnswers[questions[answerIndex].question] = currentAnswer
+        setSubmittedAnswers(copySubmittedAnswers)
     }
 
     const handleQuizSubmit = (evt) => {
@@ -17,21 +22,25 @@ const QuizForm = ({questions, onQuizSubmit}) => {
         setSubmittedAnswers([])
     }
 
+    const handleConfetti = () => {
+        setConfettiOn(true)
+    }
+
     return (
-        <div>
-            <h1>This is the quiz form!</h1>
+        <div className='questions'>
+            {confettiOn ? <Confetti width={1750} height={920} /> : null}
             <form onSubmit={handleQuizSubmit}>
-                
-            <div>
-                {questions.map((question, index) => {
-                    return (
-                    <div key={index}>
-                         <Question question={question} index={index} handleAnswerChange={handleAnswerChange}/>
-                    </div> 
-                    )
-                })}
-            </div>
-                <button type="submit">Submit</button>
+
+                <div className='question-grid'>
+                    {questions.map((question, index) => {
+                        return (
+                            <div className='question-item' key={index}>
+                                <Question question={question} index={index} handleAnswerChange={handleAnswerChange} />
+                            </div>
+                        )
+                    })}
+                </div>
+                <button onClick={handleConfetti} type="submit">Submit</button>
             </form>
         </div>
     )

@@ -45,8 +45,10 @@ function App() {
   const [wonders, setWonders] = useState([]);
   const [selectedWonder, setSelectedWonder] = useState(null);
 
+
   useEffect(() => {
     WondersService.getWonders()
+
       .then(wonders => setWonders(wonders))
   }, []);
 
