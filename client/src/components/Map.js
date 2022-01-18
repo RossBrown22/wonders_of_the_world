@@ -14,7 +14,7 @@ const Map = ({onWonderSelected, wonders}) => {
             <section id="content-1">
             <h2>Find your Favourite Wonder!</h2>
             <div id="mapbox-div">
-                <MapBox onWonderSelected={onWonderSelected} wonders={wonders}/>
+                {wonders ? <MapBox onWonderSelected={onWonderSelected} wonders={wonders}/> : null}
             </div>
             </section>
             <footer id="footer">
