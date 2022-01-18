@@ -83,10 +83,11 @@ const WonderDetail = ({wonder}) => {
             {funFactUnlocked ? 
                 <>
                     <h3>⭐️ Well Done! You Unlocked the Fact!⭐️ </h3>
-                    <p>{wonder.funFact}</p> 
+                    <p><Speech text={(wonder.funFact)} textAsButton={true} displayText="▶️" voice="Google UK English Female" />
+{wonder.funFact}</p> 
                 </>: 
                     <h3>🔒 Listen to all 3 facts above to unlock crazy fact! 🔒</h3> }
- 
+
         </div>
     )
 }

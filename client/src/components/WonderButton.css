@@ -1,8 +1,8 @@
 .wonder-button {
     display: flex;
-    background-color: #3230bb;
-    color: white;
-    border: 3px solid rgb(23, 184, 23);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
     box-shadow: 3px 3px 3px #888888;
     border-radius: 5px;
     width: 200px;
@@ -16,9 +16,9 @@
   }
 
   .wonder-button:hover {
-    background-color: rgb(23, 184, 23);
-    border: 3px solid #3230bb;
-    color: white;
+    background-color: rgb(223, 223, 218);
+    border: 2px solid black;
+    color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>✈️</text></svg>") 16 0,auto;
   }
