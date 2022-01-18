@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { Link } from 'react-router-dom'
 import L from 'leaflet'
@@ -7,7 +6,7 @@ import Icon_natural_wonders1 from '../icons/Icon_natural_wonders1.png'
 import Icon_ancient_wonders1 from '../icons/Icon_ancient_wonders1.png'
 
 
-const MapBox = ({onWonderSelected, wonders}) => {
+const MapBox = ({ onWonderSelected, wonders }) => {
 
     const handleClick = (evt) => {
         const index = evt.target.value
@@ -29,8 +28,8 @@ const MapBox = ({onWonderSelected, wonders}) => {
         iconSize: [35, 35],
     });
 
-    
-    const markerNodes = 
+
+    const markerNodes =
         wonders.map((wonder, index) => {
             let marker = null
             const selectMarkerIcon = () => {
@@ -43,8 +42,8 @@ const MapBox = ({onWonderSelected, wonders}) => {
                 }
             }
             selectMarkerIcon()
-            
-            return( 
+
+            return (
                 <Marker key={index} position={[wonder.coords.lat, wonder.coords.lng]} icon={marker}>
                     <Popup>
                         {wonder.name} <br /> <Link to={wonder.collection}><button value={index} onClick={handleClick} type="button" >Learn More</button></Link>
@@ -65,5 +64,4 @@ const MapBox = ({onWonderSelected, wonders}) => {
         </MapContainer>
     )
 }
-
 export default MapBox;

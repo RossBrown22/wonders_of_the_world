@@ -12,8 +12,7 @@ function New({wonders, selectedWonder, onWonderSelected}) {
             <NavBar />
             </nav>
             <section id="content-1">
-              <WondersContainer wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected}
-/>
+              <WondersContainer wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} />
             </section>
             <footer id="footer">
               <h3>Footer</h3>
