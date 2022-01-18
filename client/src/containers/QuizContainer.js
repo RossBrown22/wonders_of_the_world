@@ -57,12 +57,20 @@ const QuizContainer = () => {
 
     const compareAnswers = () => {
         let currentScore = 0
-        questions.forEach((question, index) => {
-            if (submittedAnswers && question.answer === submittedAnswers[index]){
-                currentScore += 1
-                console.log(currentScore);
+        // questions.forEach((question, index) => {
+        //     if (submittedAnswers && question.answer === submittedAnswers[index]){
+        //         currentScore += 1
+        //         console.log(currentScore);
+        //     }
+        // })
+
+        for (let x in submittedAnswers) {
+            for (let question of questions) {
+                if (submittedAnswers[x] === question.answer) {
+                    currentScore += 1
+                }
             }
-        })
+        }
         setScore(currentScore)
     }
 
@@ -77,17 +85,17 @@ const QuizContainer = () => {
         } else {
             return "❌ Please try again ❌"
         }
-        return `You have won ${medal}`
+        return medal
     }
 
     return (
         <>
         <div>
-            <h1>This is the quiz container!</h1>
             <QuizForm questions={questions} onQuizSubmit={onQuizSubmit}/>
             {submittedAnswers ? <>
-            <h2>{medalAward()}</h2>
-            <h3>{score}/9</h3>
+            <h2 className='you-have-won'>YOU HAVE WON</h2>
+            <h2 className='medal'>{medalAward()}</h2>
+            <h3 className='score'>{score}/9</h3>
             </> : null}
         </div>
         </>

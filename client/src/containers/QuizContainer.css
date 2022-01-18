@@ -1,0 +1,38 @@
+.questions form {
+    font-size: 20px;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.question-grid {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.question-item {
+    flex: 0 32%;
+    height: 150px;
+    margin-bottom: 2%;
+}
+
+.you-have-won {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.medal {
+    font-size: 150px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.score {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0px;
+}
