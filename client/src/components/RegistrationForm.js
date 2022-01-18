@@ -1,27 +1,36 @@
 import { useState } from "react";
 
-const RegistrationForm = ({onRegistrationSubmit}) => {
+const RegistrationForm = ({formUser, onRegistrationSubmit}) => {
     
-    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [dateOfBirth, setDateOfBirth] = useState("");
 
-    const handleNameChange = (evt) => {
-        setName(evt.target.value);
+    const handleEmailChange = (evt) => {
+        setEmail(evt.target.value);
+    }
+
+    const handleDateOfBirthChange = (evt) => {
+        setDateOfBirth(evt.target.value);
     }
 
     const handleRegistrationFormSubmit = (evt) => {
         evt.preventDefault()
 
         onRegistrationSubmit({
-            name: name
+            name: formUser.name,
+            email: email,
+            dateOfBirth: dateOfBirth 
         })
 
-        setName("")
+        setEmail("")
     }
 
     return(
         <form onSubmit={handleRegistrationFormSubmit}>
-            <label for="name">Register: <span class="required_*">*</span></label><br/>
-            <input type="text" name="name" placeholder="Enter Name..." value={name} onChange={handleNameChange} required/>
+            <label>Parents Email: </label><br/>
+            <input type="text" name="email" placeholder="Enter parent's email address..." onChange={handleEmailChange}required /><br/>
+            <label>{formUser.name}'s Date of Birth: </label><br/>
+            <input type="date" name="dateOfBirth" value={dateOfBirth} onChange={handleDateOfBirthChange} required/><br/>
             <input type="submit" value="Submit" />
         </form>
     )
