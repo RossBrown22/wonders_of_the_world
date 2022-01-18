@@ -12,9 +12,6 @@ const Quiz = () => {
             </nav>
             <section id="content-1">
               <QuizContainer />
-              <h2>Reward for completeing 1 test = 🥉</h2>
-            <h2>Reward for completeing 2 tests = 🥈</h2>
-            <h2>Reward for completeing all tests = 🥇</h2>
             </section>
             <footer id="footer">
               <h3>Footer</h3>
