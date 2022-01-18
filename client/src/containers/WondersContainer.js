@@ -1,21 +1,12 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import WondersBar from '../components/WondersBar';
-import WondersService from '../services/WondersService';
 import WonderDetail from '../components/WonderDetail';
 import './WondersContainer.css';
 
 
-const WondersContainer = () => {
-    
-    const [wonders, setWonders] = useState([]);
-    const [selectedWonder, setSelectedWonder] = useState(null);
-    const [filteredWonders, setFilteredWonders] = useState([]);
-    
+const WondersContainer = ({ wonders, selectedWonder, onWonderSelected }) => {
 
-    useEffect(() => {
-        WondersService.getWonders()
-        .then(wonders => setWonders(wonders))
-    }, []);
+    const [filteredWonders, setFilteredWonders] = useState([]);
 
     useEffect(() => {
         filterWonders()
@@ -26,26 +17,23 @@ const WondersContainer = () => {
     }, [filteredWonders]);
 
     const loadFirstWonder = () => {
-        const firstWonder = filteredWonders[0];
-        setSelectedWonder(firstWonder);
-    };
-    
-    const onWonderSelected=(wonder) => {
-        setSelectedWonder(wonder);
+        if (!selectedWonder) {
+            const firstWonder = filteredWonders[0];
+            onWonderSelected(firstWonder);
+        }
     };
 
     const filterWonders = () => {
         const pathname = window.location.pathname;
-        const result = wonders.filter(wonder => wonder.collection ===pathname);
+        const result = wonders.filter(wonder => wonder.collection === pathname);
         setFilteredWonders(result);
     };
 
-    return(
+    return (
         <div className="main-container">
-            
-                <WondersBar wonders={filteredWonders} onWonderSelected={onWonderSelected}/>
-            
-                {selectedWonder ?<WonderDetail wonder={selectedWonder} /> : null}
+            <WondersBar wonders={filteredWonders} onWonderSelected={onWonderSelected} />
+
+            {selectedWonder ? <WonderDetail wonder={selectedWonder} /> : null}
         </div>
     );
 };
