@@ -1,7 +1,8 @@
 .background-img {
   background: linear-gradient(0deg, rgba(249, 222, 166, 1) 15%, rgba(255, 255, 255, 0) 80%);
   background-color: rgb(199, 218, 218);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
