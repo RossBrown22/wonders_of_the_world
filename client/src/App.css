@@ -28,11 +28,11 @@
 #grid {
   display: grid;
   grid-template-areas: 
-  'header nav-bar .'
-  'content-1 content-1 .'
-  'footer footer .';
-  grid-template-columns: 3fr 7fr 3fr;
-  grid-template-rows: 1.5fr 8fr ;
+  'header nav-bar'
+  'content-1 content-1'
+  'footer footer';
+  grid-template-columns: 2fr 7fr ;
+  grid-template-rows: 1.5fr 8fr 1.5 ;
 }
 
 .leaflet-container{
