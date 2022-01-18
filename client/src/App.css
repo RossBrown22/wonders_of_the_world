@@ -28,10 +28,10 @@
 #grid {
   display: grid;
   grid-template-areas: 
-  'header nav-bar'
-  'content-1 content-1'
-  'footer footer';
-  grid-template-columns: 2fr 7fr ;
+  'header nav-bar .'
+  'content-1 content-1 content-1'
+  'footer footer footer';
+  grid-template-columns: 2fr 5fr 2fr ;
   grid-template-rows: 1.5fr 8fr 1.5 ;
 }
 

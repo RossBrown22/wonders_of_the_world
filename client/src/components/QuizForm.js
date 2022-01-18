@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import Question from './Question'
 import Confetti from 'react-confetti'
-import useSound from 'use-sound';
 
 const QuizForm = ({ questions, onQuizSubmit }) => {
 
-    const [submittedAnswers, setSubmittedAnswers] = useState([])
+    const [submittedAnswers, setSubmittedAnswers] = useState({})
     const [confettiOn, setConfettiOn] = useState(false)
 
     const handleAnswerChange = (evt) => {
         const currentAnswer = evt.target.value
-        setSubmittedAnswers([...submittedAnswers, currentAnswer])
+        const answerIndex = evt.target.name
+        const copySubmittedAnswers = {...submittedAnswers}
+        copySubmittedAnswers[questions[answerIndex].question] = currentAnswer
+        setSubmittedAnswers(copySubmittedAnswers)
     }
 
     const handleQuizSubmit = (evt) => {
@@ -27,13 +29,12 @@ const QuizForm = ({ questions, onQuizSubmit }) => {
     return (
         <div className='questions'>
             {confettiOn ? <Confetti width={1750} height={920} /> : null}
-            <h1>This is the quiz form!</h1>
             <form onSubmit={handleQuizSubmit}>
 
-                <div>
+                <div className='question-grid'>
                     {questions.map((question, index) => {
                         return (
-                            <div key={index}>
+                            <div className='question-item' key={index}>
                                 <Question question={question} index={index} handleAnswerChange={handleAnswerChange} />
                             </div>
                         )
