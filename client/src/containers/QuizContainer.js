@@ -94,7 +94,7 @@ const QuizContainer = () => {
         } else if (score >= 3){
             medal = '🥉';
         } else {
-            return "❌ Please try again ❌"
+            return "❌"
         }
         return medal
     }
