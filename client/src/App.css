@@ -1,12 +1,17 @@
 .background-img {
-    background-image: url(/public/img/wonderlogo.gif);
-    /* background-size: cover; */
-    background-repeat: no-repeat;
+  background: linear-gradient(0deg, rgba(249, 222, 166, 1) 15%, rgba(255, 255, 255, 0) 80%);
+  background-color: rgb(199, 218, 218);
+    background-repeat: repeat-y;
+    background-size: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.background-color {
+  background-color: rgb(249, 222, 166);
 }
 
 #header {
@@ -38,17 +43,14 @@
 .leaflet-container{
   width: 70vw;
   height: 75vh;
-
 }
 
 #mapbox-div {
-/* padding-left: 250px; */
-/* margin: auto; */
-display: flex;
-justify-content: center;
-}
 
-/* #mapbox-div {
-  width: 50%;
-  height: 50%
-} */
+  display: flex;
+  justify-content: center;
+  }
+  
+
+
+
