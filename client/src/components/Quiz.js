@@ -1,14 +1,20 @@
+import QuizContainer from "../containers/QuizContainer";
 import NavBar from "./NavBar";
 
 const Quiz = () => {
     return (
-        <>
-            <h1>Test Yourself!</h1>
+        <div id="grid">
+            <header id="header">
+            <img className="logo" src={"/img/wonderlogo.gif"}></img>
+            </header>
+            <nav id="nav-bar">
             <NavBar />
-            <h2>Reward for completeing 1 test = 🥉</h2>
-            <h2>Reward for completeing 2 tests = 🥈</h2>
-            <h2>Reward for completeing all tests = 🥇</h2>
-        </>
+            </nav>
+            <section id="content-1">
+            <h1>Quiz</h1>
+              <QuizContainer />
+            </section>
+    </div>
     );
 }
 

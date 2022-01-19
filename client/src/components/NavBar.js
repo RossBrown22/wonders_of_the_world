@@ -7,28 +7,34 @@ const NavBar = () => {
         <ul>
             <li>
                 <Link to="/">
-                    <button type="button">🏠<br />Home</button>
+                    <button type="button"><span>🏠<br />Home</span></button>
                 </Link>
             </li>
             <li>
                 <Link to="/new">
-                    <button type="button">🕌<br />New</button>
+                    <button type="button"><span>🕌<br />New</span></button>
                 </Link>
             </li>
             <li>
                 <Link to="/ancient">
-                    <button type="button">🏛<br />Ancient</button>
+                    <button type="button"><span>🏛<br />Ancient</span></button>
                 </Link>
             </li>
             <li>
                 <Link to="/natural">
-                    <button type="button">🏔<br />Natural</button>
+                    <button type="button"><span>🏔<br />Natural</span></button>
                 </Link>
             </li>
             <li>
                 <Link to="/quiz">
-                    <button type="button">📝<br />Quiz</button>
+                    <button type="button"><span>📝<br />Quiz</span></button>
                 </Link>
+            </li>
+            <li>
+                <Link to="/map">
+                    <button type="button"><span>🗺️<br />Map</span></button>
+                </Link>
+
             </li>
         </ul>
     );
