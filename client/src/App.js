@@ -44,18 +44,23 @@ function App() {
 
   const [wonders, setWonders] = useState([]);
   const [selectedWonder, setSelectedWonder] = useState(null);
+  const [mapSelectedWonder, setMapSelectedWonder] = useState(null);
 
 
   useEffect(() => {
     WondersService.getWonders()
-
-      .then(wonders => setWonders(wonders))
+    .then(wonders => setWonders(wonders))
   }, []);
 
   const onWonderSelected = (wonder) => {
+    setMapSelectedWonder(null)
     setSelectedWonder(wonder);
   };
 
+  const onMapWonderSelected = (wonder) => {
+    setSelectedWonder(null)
+    setMapSelectedWonder(wonder);
+  };
 
   return (
     <div className='background-img'>
@@ -65,17 +70,17 @@ function App() {
             return <Home addFormUser={addFormUser} createUser={createUser} currentUser={currentUser} formUser={formUser} />
           }} />
           <Route exact path="/new" render={() => {
-            return <New wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} />
+            return <New wonders={wonders} selectedWonder={selectedWonder} mapSelectedWonder={mapSelectedWonder} onWonderSelected={onWonderSelected} />
           }} />
           <Route exact path="/ancient" render={() => {
-            return <Ancient wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} />
+            return <Ancient wonders={wonders} selectedWonder={selectedWonder} mapSelectedWonder={mapSelectedWonder} onWonderSelected={onWonderSelected} />
           }} />
           <Route exact path="/natural" render={() => {
-            return <Natural wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} />
+            return <Natural wonders={wonders} selectedWonder={selectedWonder} mapSelectedWonder={mapSelectedWonder} onWonderSelected={onWonderSelected} />
           }} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/map" render={() => {
-            return <Map onWonderSelected={onWonderSelected} wonders={wonders} />
+            return <Map onMapWonderSelected={onMapWonderSelected} wonders={wonders} />
           }} />
         </>
       </Router>

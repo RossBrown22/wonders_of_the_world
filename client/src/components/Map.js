@@ -1,7 +1,7 @@
 import NavBar from "./NavBar";
 import MapBox from '../components/MapBox.js'
 
-const Map = ({ onWonderSelected, wonders }) => {
+const Map = ({ onMapWonderSelected, wonders }) => {
     return (
         <div className="map-page"> 
             <div id="grid">
@@ -14,12 +14,9 @@ const Map = ({ onWonderSelected, wonders }) => {
                 <section id="content-1">
                     <h2>Find your Favourite Wonder!</h2>
                     <div id="mapbox-div">
-                        {wonders ? <MapBox onWonderSelected={onWonderSelected} wonders={wonders} /> : null}
+                        {wonders ? <MapBox onMapWonderSelected={onMapWonderSelected} wonders={wonders} /> : null}
                     </div>
                 </section>
-                <footer id="footer">
-                    <h3>Footer</h3>
-                </footer>
             </div>
         </div>
     );

@@ -13,9 +13,6 @@ const Quiz = () => {
             <section id="content-1">
               <QuizContainer />
             </section>
-            <footer id="footer">
-              <h3>Footer</h3>
-            </footer>
     </div>
     );
 }

@@ -4,7 +4,7 @@ import WonderDetail from '../components/WonderDetail';
 import './WondersContainer.css';
 
 
-const WondersContainer = ({ wonders, selectedWonder, onWonderSelected }) => {
+const WondersContainer = ({ wonders, selectedWonder, mapSelectedWonder, onWonderSelected }) => {
 
     const [filteredWonders, setFilteredWonders] = useState([]);
 
@@ -17,10 +17,14 @@ const WondersContainer = ({ wonders, selectedWonder, onWonderSelected }) => {
     }, [filteredWonders]);
 
     const loadFirstWonder = () => {
-        if (!selectedWonder) {
+        if (!selectedWonder && !mapSelectedWonder) {
             const firstWonder = filteredWonders[0];
             onWonderSelected(firstWonder);
-        }
+        } else if (selectedWonder && !mapSelectedWonder) {
+            const firstWonder = filteredWonders[0];
+            onWonderSelected(firstWonder)
+        } 
+        // else if (!selectedWonder && mapSelectedWonder) {}
     };
 
     const filterWonders = () => {
@@ -35,7 +39,8 @@ const WondersContainer = ({ wonders, selectedWonder, onWonderSelected }) => {
             <WondersBar wonders={filteredWonders} onWonderSelected={onWonderSelected} />
             </div>
             <div id="wonder-detail">
-            {selectedWonder ? <WonderDetail wonder={selectedWonder} /> : null}
+            {selectedWonder ? <WonderDetail wonder={selectedWonder} /> : null }
+            {mapSelectedWonder ? <WonderDetail wonder={mapSelectedWonder} /> : null }
             </div>
         </div>
     );

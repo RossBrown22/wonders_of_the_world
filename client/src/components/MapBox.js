@@ -6,11 +6,11 @@ import Icon_natural_wonders1 from '../icons/Icon_natural_wonders1.png'
 import Icon_ancient_wonders1 from '../icons/Icon_ancient_wonders1.png'
 
 
-const MapBox = ({ onWonderSelected, wonders }) => {
+const MapBox = ({ onMapWonderSelected, wonders }) => {
 
     const handleClick = (evt) => {
         const index = evt.target.value
-        onWonderSelected(wonders[index])
+        onMapWonderSelected(wonders[index])
     }
 
     const icon_new = L.icon({
