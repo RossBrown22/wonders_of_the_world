@@ -16,7 +16,7 @@
 
 #header {
   grid-area: header;
-  padding-left: 30px;
+  padding-left: 50px;
 }
 
 #nav-bar {
@@ -53,6 +53,11 @@
   justify-content: center;
   }
   
+.logo {
+  width: 230px;
+  padding-left: 25%;
+
+}
 
 
 
