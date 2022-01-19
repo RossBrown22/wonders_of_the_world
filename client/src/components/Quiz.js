@@ -5,7 +5,10 @@ const Quiz = () => {
     return (
         <div id="grid">
             <header id="header">
-                <h1>Quiz</h1>
+
+            <img className="logo" src={"/img/wonderlogo.gif"}></img>
+            <h1>Quiz</h1>
+
             </header>
             <nav id="nav-bar">
             <NavBar />

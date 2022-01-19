@@ -34,6 +34,7 @@ const NavBar = () => {
                 <Link to="/map">
                     <button type="button"><span>🗺️<br />Map</span></button>
                 </Link>
+
             </li>
         </ul>
     );
