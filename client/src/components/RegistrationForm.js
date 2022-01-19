@@ -28,10 +28,10 @@ const RegistrationForm = ({formUser, onRegistrationSubmit}) => {
     return(
         <form onSubmit={handleRegistrationFormSubmit}>
             <label>Parents Email: </label><br/>
-            <input type="text" name="email" placeholder="Enter parent's email address..." onChange={handleEmailChange}required /><br/>
+            <input className="input-label" type="text" name="email" placeholder="Enter parent's email..." onChange={handleEmailChange}required /><br/>
             <label>{formUser.name}'s Date of Birth: </label><br/>
-            <input type="date" name="dateOfBirth" value={dateOfBirth} onChange={handleDateOfBirthChange} required/><br/>
-            <input type="submit" value="Submit" />
+            <input className="input-label" type="date" name="dateOfBirth" value={dateOfBirth} onChange={handleDateOfBirthChange} required/><br/>
+            <input className="reg-submit" type="submit" value="Submit" />
         </form>
     )
 }

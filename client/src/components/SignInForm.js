@@ -21,8 +21,10 @@ const SignInForm = ({onSignInSubmit}) => {
     return(
         <form onSubmit={handleSignInFormSubmit}>
             <label>Enter Your Name: </label><br/>
-            <input type="text" placeholder="Name..." value={name} onChange={handleNameChange} required/><br/>
-            <input type="submit" value="Submit" />
+            <div >
+            <input className="input-label" type="text" placeholder="Name..." value={name} onChange={handleNameChange} required/><br/>
+            <input className="reg-submit" type="submit" value="Submit" />
+            </div>
         </form>
     )
 }
