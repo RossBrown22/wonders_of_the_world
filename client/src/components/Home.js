@@ -2,6 +2,7 @@ import UsersContainer from '../containers/UsersContainer';
 import SignInPopUpWindow from './SignInPopUpWindow';
 import './Home.css'
 import { useState } from 'react';
+import {Link} from 'react-router-dom'
 
 const Home = ({ addFormUser, createUser, currentUser, formUser }) => {
     const [popUpOpen, setPopUpOpen] = useState(false)
@@ -20,9 +21,14 @@ const Home = ({ addFormUser, createUser, currentUser, formUser }) => {
             </div>
             {currentUser ?
                 <div className='front-btn'>
-                    <a href="/new"><button type="button"><span>🕌<br />New</span></button></a>
-                    <a href="/ancient"><button type="button"><span>🏛<br />Ancient</span></button></a>
-                    <a href="/natural"><button type="button"><span>🏔<br />Natural</span></button></a>
+                    <Link to="/new">
+                    <button type="button"><span>🕌<br />New</span></button>
+                    </Link>
+                    <Link to="/ancient"><button type="button"><span>🏛<br />Ancient</span></button>
+                    </Link>
+                    <Link to="/natural">
+                    <button type="button"><span>🏔<br />Natural</span></button>
+                    </Link>
                 </div>
                 : null}
 
