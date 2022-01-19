@@ -22,7 +22,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    checkIfRegistered()
+    if (!currentUser){
+      checkIfRegistered()
+    }
   }, [formUser])
 
   const addFormUser = (submittedUser) => {

@@ -20,9 +20,6 @@ const WondersContainer = ({ wonders, selectedWonder, mapSelectedWonder, onWonder
         if (!selectedWonder && !mapSelectedWonder) {
             const firstWonder = filteredWonders[0];
             onWonderSelected(firstWonder);
-        } else if (selectedWonder && !mapSelectedWonder) {
-            const firstWonder = filteredWonders[0];
-            onWonderSelected(firstWonder)
         } 
         // else if (!selectedWonder && mapSelectedWonder) {}
     };
