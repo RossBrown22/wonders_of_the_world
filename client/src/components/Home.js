@@ -15,7 +15,7 @@ const Home = ({ addFormUser, createUser, currentUser, formUser }) => {
             <div className="home-page-content">
                 <h1>The Wonders of The World</h1>
                 <img src={"/img/wonderlogo.gif"}></img>
-                {!currentUser ? <button className="sign-in-button" type="button" onClick={togglePopUpWindow}>Sign-in</button> : null}
+                {!currentUser ? <button className="sign-in-button" type="button" onClick={togglePopUpWindow}><span>Sign-in</span></button> : null}
                 {popUpOpen && <SignInPopUpWindow content={<UsersContainer addFormUser={addFormUser} createUser={createUser} currentUser={currentUser} formUser={formUser} />} handlePopUpClose={togglePopUpWindow} />}
             </div>
             {currentUser ?
