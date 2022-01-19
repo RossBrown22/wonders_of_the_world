@@ -28,7 +28,7 @@ const QuizForm = ({ questions, onQuizSubmit }) => {
 
     return (
         <div className='questions'>
-            {confettiOn ? <Confetti width={1750} height={920} /> : null}
+            {confettiOn ? <Confetti width={1750} height={900} /> : null}
             <form onSubmit={handleQuizSubmit}>
 
                 <div className='question-grid'>

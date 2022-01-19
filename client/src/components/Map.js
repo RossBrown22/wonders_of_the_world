@@ -6,7 +6,7 @@ const Map = ({ onMapWonderSelected, wonders }) => {
         <div className="map-page"> 
             <div id="grid">
                 <header id="header">
-                    <h1>The 21 Wonders of the World</h1>
+                <img className="logo" src={"/img/wonderlogo.gif"}></img>
                 </header>
                 <nav id="nav-bar">
                     <NavBar />

@@ -65,6 +65,7 @@ function App() {
   };
 
   return (
+
     <div className='background-img'>
       <Router>
         <>
@@ -86,6 +87,7 @@ function App() {
           }} />
         </>
       </Router>
+
     </div>
   );
 }
