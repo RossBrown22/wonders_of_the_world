@@ -63,23 +63,6 @@ const WonderDetail = ({wonder}) => {
     }
 
 
-// const style = {
-//     play: {
-//         button: {
-//         width: '28',
-//         height: '28',
-//         cursor: 'pointer',
-//         pointerEvents: 'none',
-//         outline: 'none',
-//         backgroundColor: 'yellow',
-//         border: 'solid 1px rgba(255,255,255,1)',
-//         borderRadius: 6
-//       },
-//     }
-//   };
-  
-
-
     return(
         <div className='wonder-detail'>
             <h2><Speech text={sayNameAndLocation()} textAsButton={true} displayText="▶" voice="Google UK English Female" />
