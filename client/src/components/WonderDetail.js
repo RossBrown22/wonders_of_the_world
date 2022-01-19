@@ -62,7 +62,6 @@ const WonderDetail = ({wonder}) => {
         )
     }
 
-
     return(
         <div className='wonder-detail'>
             <h2><Speech text={sayNameAndLocation()} textAsButton={true} displayText="▶" voice="Google UK English Female" />

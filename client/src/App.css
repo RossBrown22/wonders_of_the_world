@@ -1,18 +1,3 @@
-.background-img {
-  background: linear-gradient(0deg, rgba(249, 222, 166, 1) 15%, rgba(255, 255, 255, 0) 80%);
-  background-color: rgb(199, 218, 218);
-    background-repeat: repeat-y;
-    background-size: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.background-color {
-  background-color: rgb(249, 222, 166);
-}
 
 #header {
   grid-area: header;
@@ -28,18 +13,13 @@
   padding-left: 30px;
 }
 
-#footer {
-  grid-area: footer;
-}
-
 #grid {
   display: grid;
   grid-template-areas: 
-  'header nav-bar .'
-  'content-1 content-1 content-1'
-  'footer footer footer';
-  grid-template-columns: 2fr 5fr 2fr ;
-  grid-template-rows: 1.5fr 8fr 1.5 ;
+  'header nav-bar'
+  'content-1 content-1';
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 15% 85%;
 }
 
 .leaflet-container{
@@ -54,7 +34,7 @@
   }
   
 .logo {
-  width: 230px;
+  width: 200px;
   padding-left: 25%;
 
 }

@@ -1,7 +1,7 @@
 import NavBar from "./NavBar";
 import WondersContainer from "../containers/WondersContainer";
 
-const Natural = ({wonders, selectedWonder, onWonderSelected}) => {
+const Natural = ({wonders, selectedWonder, mapSelectedWonder, onWonderSelected}) => {
     return (
         <div id="grid">
             <header id="header">
@@ -14,11 +14,8 @@ const Natural = ({wonders, selectedWonder, onWonderSelected}) => {
             </nav>
             <section id="content-1">
             <h1>The 7 Natural Wonders of the World</h1>
-              <WondersContainer wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} />
+              <WondersContainer wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} mapSelectedWonder={mapSelectedWonder}/>
             </section>
-            <footer id="footer">
-              <h3>Footer</h3>
-            </footer>
     </div>
     );
 }

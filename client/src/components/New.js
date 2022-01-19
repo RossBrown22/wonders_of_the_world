@@ -2,7 +2,7 @@ import NavBar from "./NavBar";
 import WondersContainer from "../containers/WondersContainer";
 
 
-function New({wonders, selectedWonder, onWonderSelected}) {
+function New({wonders, selectedWonder, mapSelectedWonder, onWonderSelected}) {
   return (
     <div id="grid">
             <header id="header">
@@ -15,11 +15,8 @@ function New({wonders, selectedWonder, onWonderSelected}) {
             </nav>
             <section id="content-1">
             <h1>The 7 New Wonders of the World</h1>
-              <WondersContainer wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} />
+              <WondersContainer wonders={wonders} selectedWonder={selectedWonder} onWonderSelected={onWonderSelected} mapSelectedWonder={mapSelectedWonder}/>
             </section>
-            <footer id="footer">
-              <h3>Footer</h3>
-            </footer>
     </div>
   );
 }
