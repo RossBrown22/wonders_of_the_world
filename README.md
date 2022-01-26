@@ -23,8 +23,13 @@ A user should be able to:
 - user can add study card to study list
 - award medals for completing sections (new, ancient and natural)
 
+## Running The App
+- npm install
+- npm run seeds - in the server
+- npm run server:dev - in the server
+- npm start - in the client
 
 ## Collaborators:
 ### Kirsten Buchan
-### Guilherme Nunes
 ### Ross Brown
+### Guilherme Nunes
